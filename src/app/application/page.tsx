@@ -191,7 +191,7 @@ function CustomizedRadio({
 function NewRegistrationForm() {
   return (
     <form>
-      <Typography sx={{ py: 2 }}>Begin application process</Typography>
+      <Typography>Begin application process</Typography>
 
       <Grid container spacing={2} sx={{ flexGrow: 1, py: 2 }}>
         <Grid xs={12} sm={4}>
@@ -300,7 +300,7 @@ function NewRegistrationForm() {
 function ContinueRegistrationForm() {
   return (
     <form>
-      <Typography sx={{ py: 2 }}>Continue application process</Typography>
+      <Typography>Continue application process</Typography>
 
       <Grid container spacing={2} sx={{ flexGrow: 1, py: 2 }}>
         <Grid xs={12} sm={4}>

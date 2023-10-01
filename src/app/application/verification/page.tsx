@@ -1,6 +1,7 @@
 "use client";
 // Next / React
 import React from "react";
+import Link from "next/link";
 
 // UI library
 import {
@@ -11,11 +12,6 @@ import {
   FormLabel,
   Grid,
   Input,
-  List,
-  ListItem,
-  ListItemDecorator,
-  Radio,
-  RadioGroup,
   Typography,
 } from "@mui/joy";
 
@@ -23,29 +19,23 @@ import {
 
 // Icons
 import { KeyboardArrowRight } from "@mui/icons-material";
-import Link from "next/link";
 
 export default function EmailVerification() {
-  const [selectedValue, setSelectedValue] = React.useState("1");
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedValue(event.target.value);
-  };
-
   return (
-    <Box sx={{ p: 2 }}>
+    <Box sx={{ width: 400, p: 2 }}>
       <Typography sx={{ pb: 2 }} level="h4">
         Email Verification
       </Typography>
       <Typography>We have sent an email verification to your email</Typography>
-      <Typography sx={{ width: 400, py: 2 }}>
+      <Typography sx={{ py: 2 }}>
         Click on the verification link or enter the OTP sent to your email
         below. Once you've verified your email, you'll be one step closer to
         completing your application.
       </Typography>
-      <FormControl sx={{ width: 400, py: 1 }} required component="form">
+      <FormControl sx={{ py: 2 }} required component="form">
         <FormLabel>OTP</FormLabel>
         <Input
+          sx={{ pl: 1 }}
           required
           size="lg"
           variant="outlined"
@@ -66,7 +56,7 @@ export default function EmailVerification() {
       >
         Verify and Continue
       </Button>
-      <Typography sx={{ width: 400, py: 2 }}>
+      <Typography sx={{ pt: 1 }}>
         OTP not received? <Link href="">Resend</Link> or{" "}
         <Link href="">Change email</Link>
       </Typography>
