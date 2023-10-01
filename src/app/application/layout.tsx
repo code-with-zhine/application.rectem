@@ -41,9 +41,15 @@ export default function ApplicationPageLayout({
         </Box>
         <Divider />
         <FormControl sx={{ p: 2 }}>
-          <RadioGroup defaultValue="1" name="radio-buttons-group">
-            <Radio value="1" label="Get Started" color="primary" size="sm" />
-            <Radio disabled value="2" label="Personal Details" size="sm" />
+          <RadioGroup defaultValue="2" name="radio-buttons-group">
+            <Radio
+              disabled
+              value="1"
+              label="Get Started"
+              color="primary"
+              size="sm"
+            />
+            <Radio value="2" label="Personal Details" size="sm" />
             <Radio
               disabled
               value="danger"

@@ -27,9 +27,9 @@ export default function EmailVerification() {
       </Typography>
       <Typography>We have sent an email verification to your email</Typography>
       <Typography sx={{ py: 2 }}>
-        Click on the verification link or enter the OTP sent to your email
-        below. Once you've verified your email, you'll be one step closer to
-        completing your application.
+        Click on the verification link or enter the OTP sent to your email. Once
+        you've verified your email, you'll be one step closer to completing your
+        application.
       </Typography>
       <FormControl sx={{ py: 2 }} required component="form">
         <FormLabel>OTP</FormLabel>
