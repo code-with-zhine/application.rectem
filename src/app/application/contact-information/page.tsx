@@ -74,7 +74,12 @@ function ContactInformationForm() {
         <Grid xs={12} sm={6}>
           <FormControl required>
             <FormLabel>State</FormLabel>
-            <Select variant="outlined" placeholder="Choose one…" size="lg">
+            <Select
+              sx={{ pl: 1 }}
+              variant="outlined"
+              placeholder="Choose one…"
+              size="lg"
+            >
               <Option value="lagos">Lagos</Option>
             </Select>
             <FormHelperText></FormHelperText>
@@ -83,7 +88,12 @@ function ContactInformationForm() {
         <Grid xs={12} sm={6}>
           <FormControl required>
             <FormLabel>City</FormLabel>
-            <Select variant="outlined" placeholder="Choose one…" size="lg">
+            <Select
+              sx={{ pl: 1 }}
+              variant="outlined"
+              placeholder="Choose one…"
+              size="lg"
+            >
               <Option value="lekki">Lekki</Option>
             </Select>
             <FormHelperText></FormHelperText>
@@ -91,12 +101,12 @@ function ContactInformationForm() {
         </Grid>
 
         <Grid xs={12} sm={6}>
-          <FormControl required disabled>
+          <FormControl required>
             <FormLabel>Email</FormLabel>
             <Input
               sx={{ pl: 1 }}
               required
-              placeholder="Enter your email address"
+              value="your-email@gmail.com"
               size="lg"
               variant="outlined"
               type="email"
@@ -105,12 +115,12 @@ function ContactInformationForm() {
           </FormControl>
         </Grid>
         <Grid xs={12} sm={6}>
-          <FormControl required disabled>
+          <FormControl required>
             <FormLabel>Phone number</FormLabel>
             <Input
               sx={{ pl: 1 }}
               required
-              placeholder="Enter your maiden name"
+              value="08062820377"
               size="lg"
               variant="outlined"
               type="tel"

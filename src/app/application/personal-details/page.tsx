@@ -54,9 +54,9 @@ function PersonalDetailsForm() {
           <FormControl required>
             <FormLabel>Application Number</FormLabel>
             <Input
+              value="RCT-54789801"
               sx={{ pl: 1 }}
               required
-              disabled
               size="lg"
               variant="outlined"
               type="text"
