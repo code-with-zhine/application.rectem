@@ -142,6 +142,10 @@ function SidePane(props: BoxProps) {
 
 function Main(props: BoxProps) {
   return (
-    <Box component="main" sx={{ bgcolor: "background.surface" }} {...props} />
+    <Box
+      component="main"
+      sx={{ bgcolor: "background.surface", pb: 5 }}
+      {...props}
+    />
   );
 }

@@ -198,6 +198,7 @@ function NewRegistrationForm() {
           <FormControl required component="form">
             <FormLabel>First Name</FormLabel>
             <Input
+              sx={{ pl: 1 }}
               required
               placeholder="Enter first name"
               size="lg"
@@ -216,6 +217,7 @@ function NewRegistrationForm() {
           <FormControl required component="form">
             <FormLabel>Middle Name</FormLabel>
             <Input
+              sx={{ pl: 1 }}
               required
               placeholder="Enter middle name"
               size="lg"
@@ -234,6 +236,7 @@ function NewRegistrationForm() {
           <FormControl required component="form">
             <FormLabel>Last Name</FormLabel>
             <Input
+              sx={{ pl: 1 }}
               required
               placeholder="Enter last name"
               size="lg"
@@ -252,6 +255,7 @@ function NewRegistrationForm() {
           <FormControl required component="form">
             <FormLabel>Email Address</FormLabel>
             <Input
+              sx={{ pl: 1 }}
               required
               placeholder="Enter your email address"
               size="lg"
@@ -270,6 +274,7 @@ function NewRegistrationForm() {
           <FormControl required component="form">
             <FormLabel>Mobile Phone Number</FormLabel>
             <Input
+              sx={{ pl: 1 }}
               required
               placeholder="Enter your phone number"
               size="lg"
@@ -302,6 +307,7 @@ function ContinueRegistrationForm() {
           <FormControl required component="form">
             <FormLabel>Email Address</FormLabel>
             <Input
+              sx={{ pl: 1 }}
               required
               placeholder="Enter your email address"
               size="lg"
@@ -320,6 +326,7 @@ function ContinueRegistrationForm() {
           <FormControl required component="form">
             <FormLabel>Mobile Phone Number</FormLabel>
             <Input
+              sx={{ pl: 1 }}
               required
               placeholder="Enter your phone number"
               size="lg"
