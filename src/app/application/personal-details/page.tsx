@@ -72,7 +72,12 @@ function PersonalDetailsForm() {
         <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>Title</FormLabel>
-            <Select variant="outlined" placeholder="Choose one…" size="lg">
+            <Select
+              sx={{ pl: 1 }}
+              variant="outlined"
+              placeholder="Choose one…"
+              size="lg"
+            >
               <Option value="mr">Mr.</Option>
               <Option value="miss">Miss.</Option>
               <Option value="mrs">Mrs.</Option>
@@ -166,7 +171,12 @@ function PersonalDetailsForm() {
         <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>Gender</FormLabel>
-            <Select variant="outlined" placeholder="Choose one…" size="lg">
+            <Select
+              sx={{ pl: 1 }}
+              variant="outlined"
+              placeholder="Choose one…"
+              size="lg"
+            >
               <Option value="M">Male</Option>
               <Option value="F">Female</Option>
             </Select>
@@ -176,7 +186,12 @@ function PersonalDetailsForm() {
         <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>Religion</FormLabel>
-            <Select variant="outlined" placeholder="Choose one…" size="lg">
+            <Select
+              sx={{ pl: 1 }}
+              variant="outlined"
+              placeholder="Choose one…"
+              size="lg"
+            >
               <Option value="christian">Christianity</Option>
               <Option value="islam">Islam</Option>
             </Select>
@@ -199,7 +214,12 @@ function PersonalDetailsForm() {
         <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>Nationality</FormLabel>
-            <Select variant="outlined" placeholder="Choose one…" size="lg">
+            <Select
+              sx={{ pl: 1 }}
+              variant="outlined"
+              placeholder="Choose one…"
+              size="lg"
+            >
               <Option value="nigeria">Nigeria</Option>
             </Select>
             <FormHelperText></FormHelperText>
@@ -208,7 +228,12 @@ function PersonalDetailsForm() {
         <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>State Of Origin</FormLabel>
-            <Select variant="outlined" placeholder="Choose one…" size="lg">
+            <Select
+              sx={{ pl: 1 }}
+              variant="outlined"
+              placeholder="Choose one…"
+              size="lg"
+            >
               <Option value="lagos">Lagos</Option>
             </Select>
             <FormHelperText></FormHelperText>
@@ -217,7 +242,12 @@ function PersonalDetailsForm() {
         <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>Local Government</FormLabel>
-            <Select variant="outlined" placeholder="Choose one…" size="lg">
+            <Select
+              sx={{ pl: 1 }}
+              variant="outlined"
+              placeholder="Choose one…"
+              size="lg"
+            >
               <Option value="eti-osa">Eti-Osa</Option>
             </Select>
             <FormHelperText></FormHelperText>
@@ -226,7 +256,12 @@ function PersonalDetailsForm() {
         <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>Disability</FormLabel>
-            <Select variant="outlined" placeholder="Choose one…" size="lg">
+            <Select
+              sx={{ pl: 1 }}
+              variant="outlined"
+              placeholder="Choose one…"
+              size="lg"
+            >
               <Option value="N">None</Option>
               <Option value="Y">Yes</Option>
             </Select>
