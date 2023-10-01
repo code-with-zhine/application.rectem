@@ -72,8 +72,6 @@ function CustomizedRadio({
 }) {
   return (
     <RadioGroup aria-label="Your plan" name="people" defaultValue="1">
-      <p>1</p>
-
       <List
         sx={{
           minWidth: 240,
@@ -82,10 +80,9 @@ function CustomizedRadio({
           "--ListItem-radius": "8px",
           "--ListItemDecorator-size": "32px",
           py: 2,
-          m: 0,
+          px: 0,
         }}
       >
-        <p>2</p>
         {[
           {
             value: 1,
