@@ -81,7 +81,7 @@ function CustomizedRadio({
           "--ListItem-paddingY": "1rem",
           "--ListItem-radius": "8px",
           "--ListItemDecorator-size": "32px",
-          p: 0,
+          py: 2,
           m: 0,
         }}
       >
