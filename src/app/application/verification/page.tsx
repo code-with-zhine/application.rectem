@@ -22,7 +22,7 @@ import { KeyboardArrowRight } from "@mui/icons-material";
 
 export default function EmailVerification() {
   return (
-    <Box sx={{ width: 400, p: 2 }}>
+    <Box sx={{ width: 400, display: "flex", flexWrap: "wrap", p: 2 }}>
       <Typography sx={{ pb: 2 }} level="h4">
         Email Verification
       </Typography>
