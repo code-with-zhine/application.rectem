@@ -98,7 +98,7 @@ export default function Home() {
               pb: 5,
               display: "flex",
               flexDirection: "column",
-              gap: 2,
+              // gap: 2,
               width: 400,
               maxWidth: "100%",
               mx: "auto",
@@ -106,7 +106,7 @@ export default function Home() {
               "& form": {
                 display: "flex",
                 flexDirection: "column",
-                gap: 2,
+                // gap: 2,
               },
               [`& .${formLabelClasses.asterisk}`]: {
                 visibility: "hidden",
@@ -119,7 +119,7 @@ export default function Home() {
             <Typography>Carefully fill all informations correctly</Typography>
 
             <FormControl>
-              <FormLabel>PREFERRED APPLICATION MODE</FormLabel>
+              <FormLabel sx={{ pt: 2 }}>PREFERRED APPLICATION MODE</FormLabel>
               <RadioGroup
                 orientation="horizontal"
                 defaultValue="outlined"
@@ -136,7 +136,7 @@ export default function Home() {
               Continue
             </Button>
           </Box>
-          <Box component="footer" sx={{ py: 3 }}>
+          <Box component="footer" sx={{ py: 1 }}>
             <Typography level="body-xs">
               All right reserved © CITM {new Date().getFullYear()}
             </Typography>
@@ -180,7 +180,8 @@ function CustomizedRadio() {
       name="platform"
       sx={{
         flexDirection: "row",
-        gap: 2,
+        // gap: 2,
+        py: 1,
         [`& .${radioClasses.checked}`]: {
           [`& .${radioClasses.action}`]: {
             inset: -1,
@@ -215,7 +216,7 @@ function CustomizedRadio() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: 1.5,
+            mr: 1,
             p: 2,
             minWidth: 120,
           }}
@@ -225,7 +226,7 @@ function CustomizedRadio() {
             value={value.title}
             checkedIcon={<CheckCircleRoundedIcon />}
           />
-          <Avatar variant="soft" size="sm" />
+          <Avatar sx={{ mb: 1 }} variant="soft" size="sm" />
           <FormLabel htmlFor={value.title}>{value.title}</FormLabel>
           <FormLabel htmlFor={value.title}>{value.slug}</FormLabel>
         </Sheet>
