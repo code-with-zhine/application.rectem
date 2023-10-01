@@ -72,21 +72,10 @@ function PersonalDetailsForm() {
         <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>Title</FormLabel>
-            <Select
-              sx={{ pl: 1 }}
-              variant="outlined"
-              placeholder="Choose one…"
-              size="lg"
-            >
-              <Option sx={{ m: 0 }} value="mr">
-                Mr.
-              </Option>
-              <Option sx={{ m: 0 }} value="miss">
-                Miss.
-              </Option>
-              <Option sx={{ m: 0 }} value="mrs">
-                Mrs.
-              </Option>
+            <Select variant="outlined" placeholder="Choose one…" size="lg">
+              <Option value="mr">Mr.</Option>
+              <Option value="miss">Miss.</Option>
+              <Option value="mrs">Mrs.</Option>
             </Select>
             <FormHelperText></FormHelperText>
           </FormControl>
@@ -147,23 +136,15 @@ function PersonalDetailsForm() {
           <FormControl required>
             <FormLabel>Marital Status</FormLabel>
             <Select
-              sx={{ pl: 1 }}
+              sx={{ pl: 1, m: 0 }}
               variant="outlined"
               placeholder="Choose one…"
               size="lg"
             >
-              <Option sx={{ m: 0 }} value="single">
-                Single
-              </Option>
-              <Option sx={{ m: 0 }} value="engaged">
-                Engaged
-              </Option>
-              <Option sx={{ m: 0 }} value="married">
-                Married
-              </Option>
-              <Option sx={{ m: 0 }} value="divorced">
-                Divorced
-              </Option>
+              <Option value="single">Single</Option>
+              <Option value="engaged">Engaged</Option>
+              <Option value="married">Married</Option>
+              <Option value="divorced">Divorced</Option>
             </Select>
             <FormHelperText></FormHelperText>
           </FormControl>
@@ -186,12 +167,8 @@ function PersonalDetailsForm() {
           <FormControl required>
             <FormLabel>Gender</FormLabel>
             <Select variant="outlined" placeholder="Choose one…" size="lg">
-              <Option sx={{ m: 0 }} value="M">
-                Male
-              </Option>
-              <Option sx={{ m: 0 }} value="F">
-                Female
-              </Option>
+              <Option value="M">Male</Option>
+              <Option value="F">Female</Option>
             </Select>
             <FormHelperText></FormHelperText>
           </FormControl>
@@ -200,12 +177,8 @@ function PersonalDetailsForm() {
           <FormControl required>
             <FormLabel>Religion</FormLabel>
             <Select variant="outlined" placeholder="Choose one…" size="lg">
-              <Option sx={{ m: 0 }} value="christian">
-                Christianity
-              </Option>
-              <Option sx={{ m: 0 }} value="islam">
-                Islam
-              </Option>
+              <Option value="christian">Christianity</Option>
+              <Option value="islam">Islam</Option>
             </Select>
             <FormHelperText></FormHelperText>
           </FormControl>
@@ -227,9 +200,7 @@ function PersonalDetailsForm() {
           <FormControl required>
             <FormLabel>Nationality</FormLabel>
             <Select variant="outlined" placeholder="Choose one…" size="lg">
-              <Option sx={{ m: 0 }} value="nigeria">
-                Nigeria
-              </Option>
+              <Option value="nigeria">Nigeria</Option>
             </Select>
             <FormHelperText></FormHelperText>
           </FormControl>
@@ -238,9 +209,7 @@ function PersonalDetailsForm() {
           <FormControl required>
             <FormLabel>State Of Origin</FormLabel>
             <Select variant="outlined" placeholder="Choose one…" size="lg">
-              <Option sx={{ m: 0 }} value="lagos">
-                Lagos
-              </Option>
+              <Option value="lagos">Lagos</Option>
             </Select>
             <FormHelperText></FormHelperText>
           </FormControl>
@@ -249,9 +218,7 @@ function PersonalDetailsForm() {
           <FormControl required>
             <FormLabel>Local Government</FormLabel>
             <Select variant="outlined" placeholder="Choose one…" size="lg">
-              <Option sx={{ m: 0 }} value="eti-osa">
-                Eti-Osa
-              </Option>
+              <Option value="eti-osa">Eti-Osa</Option>
             </Select>
             <FormHelperText></FormHelperText>
           </FormControl>
@@ -260,12 +227,8 @@ function PersonalDetailsForm() {
           <FormControl required>
             <FormLabel>Disability</FormLabel>
             <Select variant="outlined" placeholder="Choose one…" size="lg">
-              <Option sx={{ m: 0 }} value="N">
-                None
-              </Option>
-              <Option sx={{ m: 0 }} value="Y">
-                Yes
-              </Option>
+              <Option value="N">None</Option>
+              <Option value="Y">Yes</Option>
             </Select>
             <FormHelperText></FormHelperText>
           </FormControl>
