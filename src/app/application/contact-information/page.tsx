@@ -121,7 +121,7 @@ function ContactInformationForm() {
       </Grid>
       <Button
         href="application"
-        sx={{ width: 190 }}
+        sx={{ width: 190, py: "10px" }}
         endDecorator={<KeyboardArrowRight />}
         type="submit"
       >

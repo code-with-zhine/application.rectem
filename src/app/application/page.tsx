@@ -47,8 +47,8 @@ function GetStarted({ selectedValue }: { selectedValue: String }) {
   if (selectedValue === "1") {
     return (
       <Button
-        href="application"
-        sx={{ width: 200 }}
+        size="md"
+        sx={{ width: 200, py: "10px" }}
         endDecorator={<KeyboardArrowRight />}
       >
         Go To Student Portal

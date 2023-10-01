@@ -132,7 +132,11 @@ export default function Home() {
 
             <CustomizedRadio />
 
-            <Button sx={{ width: 100 }} endDecorator={<KeyboardArrowRight />}>
+            <Button
+              size="md"
+              sx={{ width: 130, py: "10px" }}
+              endDecorator={<KeyboardArrowRight />}
+            >
               Continue
             </Button>
           </Box>
