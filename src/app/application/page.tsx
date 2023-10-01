@@ -137,7 +137,7 @@ function CustomizedRadio({
             ),
             heading: "No, but i wish to resume an ongoing registration",
             content:
-              "Verify your email address and phone number we will redirect you to your ongoing registration",
+              "Verify your email and phone number we will redirect you to your ongoing registration",
           },
         ].map((item, index) => (
           <ListItem
