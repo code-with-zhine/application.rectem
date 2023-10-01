@@ -136,12 +136,14 @@ function PersonalDetailsForm() {
           <FormControl required>
             <FormLabel>Marital Status</FormLabel>
             <Select
-              sx={{ pl: 1, m: 0 }}
+              sx={{ pl: 1 }}
               variant="outlined"
               placeholder="Choose one…"
               size="lg"
             >
-              <Option value="single">Single</Option>
+              <Option sx={{ m: 0, p: 0 }} value="single">
+                Single
+              </Option>
               <Option value="engaged">Engaged</Option>
               <Option value="married">Married</Option>
               <Option value="divorced">Divorced</Option>
