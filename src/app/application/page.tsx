@@ -287,7 +287,7 @@ function NewRegistrationForm() {
       </Grid>
       <Button
         href="application"
-        sx={{ width: 100 }}
+        sx={{ width: 100, py: "10px" }}
         endDecorator={<KeyboardArrowRight />}
         type="submit"
       >
@@ -339,7 +339,7 @@ function ContinueRegistrationForm() {
       </Grid>
       <Button
         href="application"
-        sx={{ width: 190 }}
+        sx={{ width: 190, py: "10px" }}
         endDecorator={<KeyboardArrowRight />}
         type="submit"
       >
