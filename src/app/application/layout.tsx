@@ -70,9 +70,7 @@ export default function ApplicationPageLayout({
           </RadioGroup>
         </FormControl>
       </SidePane>
-      <Main>
-        <Box sx={{ px: 4 }}>{children}</Box>
-      </Main>
+      <Main>{children}</Main>
     </Root>
   );
 }

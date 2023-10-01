@@ -33,7 +33,7 @@ export default function EmailVerification() {
   };
 
   return (
-    <Box sx={{ p: 4 }}>
+    <Box sx={{ p: 2 }}>
       <Typography sx={{ pb: 2 }} level="h4">
         Email Verification
       </Typography>

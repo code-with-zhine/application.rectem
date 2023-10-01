@@ -32,7 +32,7 @@ export default function ApplicationPage() {
   };
 
   return (
-    <Box sx={{ p: 4 }}>
+    <Box sx={{ p: 2, maxWidth: 600 }}>
       <Typography sx={{ pb: 2 }} level="h4">{`Get started`}</Typography>
       <Typography>Are you a returning student?</Typography>
       <CustomizedRadio handleChange={handleChange} />
@@ -79,7 +79,7 @@ function CustomizedRadio({
           "--ListItem-paddingY": "1rem",
           "--ListItem-radius": "8px",
           "--ListItemDecorator-size": "32px",
-          pb: 5,
+          pb: 2,
         }}
       >
         {[
