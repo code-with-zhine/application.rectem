@@ -10,7 +10,6 @@ import {
   FormControl,
   FormHelperText,
   FormLabel,
-  Grid,
   Input,
   Typography,
 } from "@mui/joy";
@@ -22,7 +21,7 @@ import { KeyboardArrowRight } from "@mui/icons-material";
 
 export default function EmailVerification() {
   return (
-    <Grid xs={12} sx={{ p: 2 }}>
+    <Box sx={{ maxWidth: 400, display: "flex", flexWrap: "wrap", p: 2 }}>
       <Typography sx={{ pb: 2 }} level="h4">
         Email Verification
       </Typography>
@@ -60,6 +59,6 @@ export default function EmailVerification() {
         OTP not received? <Link href="">Resend</Link> or{" "}
         <Link href="">Change email</Link>
       </Typography>
-    </Grid>
+    </Box>
   );
 }
