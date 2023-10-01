@@ -41,6 +41,15 @@ const theme = extendTheme({
         }),
       },
     },
+    JoySelect: {
+      styleOverrides: {
+        root: {
+          padding: 0,
+          margin: 0,
+          left: 0
+        }
+      },
+    }
   },
 });
 
