@@ -11,12 +11,7 @@ import {
   FormLabel,
   Grid,
   Input,
-  List,
-  ListItem,
-  ListItemDecorator,
   Option,
-  Radio,
-  RadioGroup,
   Select,
   Textarea,
   Typography,
@@ -27,43 +22,91 @@ import {
 // Icons
 import { KeyboardArrowRight } from "@mui/icons-material";
 
-export default function ContactInformationPage() {
-  const [selectedValue, setSelectedValue] = React.useState("1");
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedValue(event.target.value);
-  };
-
+export default function NextOfKinPage() {
   return (
-    <Box sx={{ p: 2, maxWidth: 600 }}>
+    <Box sx={{ p: 2, maxWidth: 700 }}>
       <Typography sx={{ pb: 2 }} level="h4">
-        Contact Information
+        Next of kin Information
       </Typography>
       <Typography>Fill all details carefully!</Typography>
-      <ContactInformationForm />
+      <NextOfKinForm />
     </Box>
   );
 }
 
 // In-components
 
-function ContactInformationForm() {
+function NextOfKinForm() {
   return (
     <form>
       <Grid container spacing={2} sx={{ flexGrow: 1, py: 2 }}>
+        <Grid xs={12} sm={4}>
+          <FormControl required>
+            <FormLabel>Title</FormLabel>
+            <Select
+              required
+              sx={{ pl: 1 }}
+              variant="outlined"
+              placeholder="Choose one…"
+              size="lg"
+            >
+              <Option value="mr">Mr.</Option>
+              <Option value="miss">Miss.</Option>
+              <Option value="mrs">Mrs.</Option>
+              <Option value="pastor">Pst.</Option>
+              <Option value="eng">Eng.</Option>
+              <Option value="dr">Dr.</Option>
+            </Select>
+            <FormHelperText></FormHelperText>
+          </FormControl>
+        </Grid>
         <Grid xs={12} sm={8}>
           <FormControl required>
-            <FormLabel>Address</FormLabel>
-            <Textarea placeholder="Enter your address" minRows={3} />
+            <FormLabel>Full Name</FormLabel>
+            <Input
+              sx={{ pl: 1 }}
+              required
+              placeholder="Enter full name"
+              size="lg"
+              variant="outlined"
+              type="text"
+              slotProps={{
+                input: {
+                  minLength: 3,
+                },
+              }}
+            />
             <FormHelperText></FormHelperText>
           </FormControl>
         </Grid>
         <Grid xs={12} sm={4}>
-          <FormControl>
-            <FormLabel>Postal Address</FormLabel>
+          <FormControl required>
+            <FormLabel>Relationship</FormLabel>
+            <Select
+              required
+              sx={{ pl: 1 }}
+              variant="outlined"
+              placeholder="Choose one…"
+              size="lg"
+            >
+              <Option value="single">Mother</Option>
+              <Option value="engaged">Father</Option>
+              <Option value="brother">Brother</Option>
+              <Option value="sister">Sister</Option>
+              <Option value="uncle">Uncle</Option>
+              <Option value="aunty">Aunty</Option>
+              <Option value="others">Others</Option>
+            </Select>
+            <FormHelperText></FormHelperText>
+          </FormControl>
+        </Grid>
+        <Grid xs={12} sm={4}>
+          <FormControl required>
+            <FormLabel>Phone number</FormLabel>
             <Input
               sx={{ pl: 1 }}
-              placeholder="Enter your postal address"
+              required
+              placeholder="Enter phone number"
               size="lg"
               variant="outlined"
               type="tel"
@@ -71,32 +114,12 @@ function ContactInformationForm() {
             <FormHelperText></FormHelperText>
           </FormControl>
         </Grid>
-        <Grid xs={12} sm={6}>
-          <FormControl required>
-            <FormLabel>State</FormLabel>
-            <Select variant="outlined" placeholder="Choose one…" size="lg">
-              <Option value="lagos">Lagos</Option>
-            </Select>
-            <FormHelperText></FormHelperText>
-          </FormControl>
-        </Grid>
-        <Grid xs={12} sm={6}>
-          <FormControl required>
-            <FormLabel>City</FormLabel>
-            <Select variant="outlined" placeholder="Choose one…" size="lg">
-              <Option value="lekki">Lekki</Option>
-            </Select>
-            <FormHelperText></FormHelperText>
-          </FormControl>
-        </Grid>
-
-        <Grid xs={12} sm={6}>
-          <FormControl required disabled>
+        <Grid xs={12} sm={4}>
+          <FormControl>
             <FormLabel>Email</FormLabel>
             <Input
               sx={{ pl: 1 }}
-              required
-              placeholder="Enter your email address"
+              placeholder="Enter email"
               size="lg"
               variant="outlined"
               type="email"
@@ -104,17 +127,40 @@ function ContactInformationForm() {
             <FormHelperText></FormHelperText>
           </FormControl>
         </Grid>
-        <Grid xs={12} sm={6}>
-          <FormControl required disabled>
-            <FormLabel>Phone number</FormLabel>
+        <Grid xs={12} sm={4}>
+          <FormControl required>
+            <FormLabel>Occupation</FormLabel>
             <Input
               sx={{ pl: 1 }}
               required
-              placeholder="Enter your maiden name"
+              placeholder="Enter occupation"
               size="lg"
               variant="outlined"
-              type="tel"
+              type="text"
             />
+            <FormHelperText></FormHelperText>
+          </FormControl>
+        </Grid>
+        <Grid xs={12} sm={4}>
+          <FormControl required>
+            <FormLabel>Address</FormLabel>
+            <Textarea required placeholder="Enter address" minRows={3} />
+            <FormHelperText></FormHelperText>
+          </FormControl>
+        </Grid>
+        <Grid xs={12} sm={4}>
+          <FormControl required>
+            <FormLabel>Nationality</FormLabel>
+            <Select
+              required
+              sx={{ pl: 1 }}
+              variant="outlined"
+              placeholder="Choose one…"
+              size="lg"
+            >
+              <Option value="nigeria">Nigeria</Option>
+              <Option value="others">Others</Option>
+            </Select>
             <FormHelperText></FormHelperText>
           </FormControl>
         </Grid>

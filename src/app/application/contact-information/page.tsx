@@ -11,12 +11,7 @@ import {
   FormLabel,
   Grid,
   Input,
-  List,
-  ListItem,
-  ListItemDecorator,
   Option,
-  Radio,
-  RadioGroup,
   Select,
   Textarea,
   Typography,
@@ -28,12 +23,6 @@ import {
 import { KeyboardArrowRight } from "@mui/icons-material";
 
 export default function ContactInformationPage() {
-  const [selectedValue, setSelectedValue] = React.useState("1");
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedValue(event.target.value);
-  };
-
   return (
     <Box sx={{ p: 2, maxWidth: 600 }}>
       <Typography sx={{ pb: 2 }} level="h4">
@@ -51,14 +40,14 @@ function ContactInformationForm() {
   return (
     <form>
       <Grid container spacing={2} sx={{ flexGrow: 1, py: 2 }}>
-        <Grid xs={12} sm={8}>
+        <Grid xs={12} sm={6}>
           <FormControl required>
             <FormLabel>Address</FormLabel>
-            <Textarea placeholder="Enter your address" minRows={3} />
+            <Textarea required placeholder="Enter your address" minRows={3} />
             <FormHelperText></FormHelperText>
           </FormControl>
         </Grid>
-        <Grid xs={12} sm={4}>
+        <Grid xs={12} sm={6}>
           <FormControl>
             <FormLabel>Postal Address</FormLabel>
             <Input
@@ -75,6 +64,7 @@ function ContactInformationForm() {
           <FormControl required>
             <FormLabel>State</FormLabel>
             <Select
+              required
               sx={{ pl: 1 }}
               variant="outlined"
               placeholder="Choose one…"
@@ -89,6 +79,7 @@ function ContactInformationForm() {
           <FormControl required>
             <FormLabel>City</FormLabel>
             <Select
+              required
               sx={{ pl: 1 }}
               variant="outlined"
               placeholder="Choose one…"
@@ -96,21 +87,6 @@ function ContactInformationForm() {
             >
               <Option value="lekki">Lekki</Option>
             </Select>
-            <FormHelperText></FormHelperText>
-          </FormControl>
-        </Grid>
-
-        <Grid xs={12} sm={6}>
-          <FormControl required>
-            <FormLabel>Email</FormLabel>
-            <Input
-              sx={{ pl: 1 }}
-              required
-              value="your-email@gmail.com"
-              size="lg"
-              variant="outlined"
-              type="email"
-            />
             <FormHelperText></FormHelperText>
           </FormControl>
         </Grid>
@@ -124,6 +100,20 @@ function ContactInformationForm() {
               size="lg"
               variant="outlined"
               type="tel"
+            />
+            <FormHelperText></FormHelperText>
+          </FormControl>
+        </Grid>
+        <Grid xs={12} sm={6}>
+          <FormControl required>
+            <FormLabel>Email</FormLabel>
+            <Input
+              sx={{ pl: 1 }}
+              required
+              value="your-email@gmail.com"
+              size="lg"
+              variant="outlined"
+              type="email"
             />
             <FormHelperText></FormHelperText>
           </FormControl>

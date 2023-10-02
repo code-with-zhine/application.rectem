@@ -14,10 +14,13 @@ import {
   List,
   ListItem,
   ListItemDecorator,
+  Modal,
+  ModalClose,
   Option,
   Radio,
   RadioGroup,
   Select,
+  Sheet,
   Textarea,
   Typography,
 } from "@mui/joy";
@@ -27,7 +30,7 @@ import {
 // Icons
 import { KeyboardArrowRight } from "@mui/icons-material";
 
-export default function ContactInformationPage() {
+export default function CourseOfStudyPage() {
   const [selectedValue, setSelectedValue] = React.useState("1");
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -37,85 +40,49 @@ export default function ContactInformationPage() {
   return (
     <Box sx={{ p: 2, maxWidth: 600 }}>
       <Typography sx={{ pb: 2 }} level="h4">
-        Contact Information
+        Proposed Course Of Study
       </Typography>
       <Typography>Fill all details carefully!</Typography>
-      <ContactInformationForm />
+      <CourseOfStudyForm />
     </Box>
   );
 }
 
 // In-components
 
-function ContactInformationForm() {
+function CourseOfStudyForm() {
+  const [open, setOpen] = React.useState<boolean>(false);
+
   return (
     <form>
       <Grid container spacing={2} sx={{ flexGrow: 1, py: 2 }}>
         <Grid xs={12} sm={8}>
           <FormControl required>
-            <FormLabel>Address</FormLabel>
-            <Textarea placeholder="Enter your address" minRows={3} />
-            <FormHelperText></FormHelperText>
-          </FormControl>
-        </Grid>
-        <Grid xs={12} sm={4}>
-          <FormControl>
-            <FormLabel>Postal Address</FormLabel>
-            <Input
-              sx={{ pl: 1 }}
-              placeholder="Enter your postal address"
-              size="lg"
-              variant="outlined"
-              type="tel"
-            />
-            <FormHelperText></FormHelperText>
-          </FormControl>
-        </Grid>
-        <Grid xs={12} sm={6}>
-          <FormControl required>
-            <FormLabel>State</FormLabel>
+            <FormLabel>School</FormLabel>
             <Select variant="outlined" placeholder="Choose one…" size="lg">
               <Option value="lagos">Lagos</Option>
             </Select>
             <FormHelperText></FormHelperText>
           </FormControl>
         </Grid>
-        <Grid xs={12} sm={6}>
+        <Grid xs={12} sm={8}>
           <FormControl required>
-            <FormLabel>City</FormLabel>
+            <FormLabel>Course</FormLabel>
             <Select variant="outlined" placeholder="Choose one…" size="lg">
               <Option value="lekki">Lekki</Option>
             </Select>
-            <FormHelperText></FormHelperText>
-          </FormControl>
-        </Grid>
-
-        <Grid xs={12} sm={6}>
-          <FormControl required disabled>
-            <FormLabel>Email</FormLabel>
-            <Input
-              sx={{ pl: 1 }}
-              required
-              placeholder="Enter your email address"
-              size="lg"
-              variant="outlined"
-              type="email"
-            />
-            <FormHelperText></FormHelperText>
-          </FormControl>
-        </Grid>
-        <Grid xs={12} sm={6}>
-          <FormControl required disabled>
-            <FormLabel>Phone number</FormLabel>
-            <Input
-              sx={{ pl: 1 }}
-              required
-              placeholder="Enter your maiden name"
-              size="lg"
-              variant="outlined"
-              type="tel"
-            />
-            <FormHelperText></FormHelperText>
+            <FormHelperText>
+              <a
+                style={{
+                  cursor: "pointer",
+                  paddingLeft: 5,
+                  color: "lightcoral",
+                }}
+                onClick={() => setOpen(true)}
+              >
+                Computer Science requirements
+              </a>
+            </FormHelperText>
           </FormControl>
         </Grid>
       </Grid>
@@ -127,6 +94,40 @@ function ContactInformationForm() {
       >
         Save and Continue
       </Button>
+
+      <Modal
+        aria-labelledby="modal-title"
+        aria-describedby="modal-desc"
+        open={open}
+        onClose={() => setOpen(false)}
+        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+      >
+        <Sheet
+          variant="plain"
+          sx={{
+            maxWidth: 500,
+            borderRadius: "md",
+            p: 3,
+            boxShadow: "lg",
+          }}
+        >
+          <ModalClose variant="plain" sx={{ m: 1 }} />
+          <Typography
+            component="h2"
+            id="modal-title"
+            level="h4"
+            textColor="inherit"
+            fontWeight="lg"
+            mb={1}
+          >
+            This is the modal title
+          </Typography>
+          <Typography id="modal-desc" textColor="text.tertiary">
+            Make sure to use <code>aria-labelledby</code> on the modal dialog
+            with an optional <code>aria-describedby</code> attribute.
+          </Typography>
+        </Sheet>
+      </Modal>
     </form>
   );
 }

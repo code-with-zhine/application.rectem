@@ -25,14 +25,14 @@ import {
 import { KeyboardArrowRight } from "@mui/icons-material";
 
 export default function ApplicationPage() {
-  const [selectedValue, setSelectedValue] = React.useState("1");
+  const [selectedValue, setSelectedValue] = React.useState("");
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedValue(event.target.value);
   };
 
   return (
-    <Box sx={{ p: 2, maxWidth: 600 }}>
+    <Box sx={{ p: 2, maxWidth: 700 }}>
       <Typography sx={{ pb: 2 }} level="h4">{`Get started`}</Typography>
       <Typography>Are you a returning student?</Typography>
       <CustomizedRadio handleChange={handleChange} />
@@ -71,7 +71,7 @@ function CustomizedRadio({
   handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }) {
   return (
-    <RadioGroup aria-label="Your plan" name="people" defaultValue="1">
+    <RadioGroup aria-label="Your plan" name="people">
       <List
         sx={{
           minWidth: 240,

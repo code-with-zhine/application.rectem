@@ -18,17 +18,21 @@ import {
   Radio,
   RadioGroup,
   Select,
+  Stack,
   Textarea,
   Typography,
+  Table,
 } from "@mui/joy";
 
 // Custom components
 
 // Icons
-import { KeyboardArrowRight } from "@mui/icons-material";
+import { Add, KeyboardArrowRight } from "@mui/icons-material";
 
 export default function ContactInformationPage() {
   const [selectedValue, setSelectedValue] = React.useState("1");
+  const [isExaminationFormVisible, setIsExaminationFormVisible] =
+    React.useState<string>("OLEVEL");
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedValue(event.target.value);
@@ -37,96 +41,335 @@ export default function ContactInformationPage() {
   return (
     <Box sx={{ p: 2, maxWidth: 600 }}>
       <Typography sx={{ pb: 2 }} level="h4">
-        Contact Information
+        Examination(s)
       </Typography>
       <Typography>Fill all details carefully!</Typography>
-      <ContactInformationForm />
+      <Grid container spacing={2} sx={{ maxWidth: 300, flexGrow: 1, py: 2 }}>
+        <Grid xs={6}>
+          <Button
+            variant="soft"
+            color="success"
+            fullWidth
+            href="application"
+            sx={{ py: "10px" }}
+            startDecorator={<Add />}
+            type="submit"
+            onClick={() => setIsExaminationFormVisible("OLEVEL")}
+          >
+            O'LEVEL
+          </Button>
+        </Grid>
+        <Grid xs={6}>
+          <Button
+            variant="soft"
+            color="success"
+            fullWidth
+            href="application"
+            sx={{ py: "10px" }}
+            startDecorator={<Add />}
+            type="submit"
+            onClick={() => setIsExaminationFormVisible("UTME")}
+          >
+            UTME
+          </Button>
+        </Grid>
+      </Grid>
+      {isExaminationFormVisible == "OLEVEL" && <AddOlevelForm />}
+      {isExaminationFormVisible == "UTME" && <AddUtmeForm />}
+      {/* <AddOlevelForm /> */}
     </Box>
   );
 }
 
 // In-components
 
-function ContactInformationForm() {
+function AddOlevelForm() {
   return (
     <form>
       <Grid container spacing={2} sx={{ flexGrow: 1, py: 2 }}>
-        <Grid xs={12} sm={8}>
+        <Grid xs={12} sm={4}>
           <FormControl required>
-            <FormLabel>Address</FormLabel>
-            <Textarea placeholder="Enter your address" minRows={3} />
+            <FormLabel>Examination</FormLabel>
+            <Select
+              required
+              sx={{ pl: 1 }}
+              variant="outlined"
+              placeholder="Choose one…"
+              size="lg"
+            >
+              <Option value="WAEC">WAEC</Option>
+              <Option value="NECO">NECO</Option>
+              <Option value="NABTEB">NABTEB</Option>
+            </Select>
             <FormHelperText></FormHelperText>
           </FormControl>
         </Grid>
         <Grid xs={12} sm={4}>
-          <FormControl>
-            <FormLabel>Postal Address</FormLabel>
-            <Input
-              sx={{ pl: 1 }}
-              placeholder="Enter your postal address"
-              size="lg"
-              variant="outlined"
-              type="tel"
-            />
-            <FormHelperText></FormHelperText>
-          </FormControl>
-        </Grid>
-        <Grid xs={12} sm={6}>
           <FormControl required>
-            <FormLabel>State</FormLabel>
-            <Select variant="outlined" placeholder="Choose one…" size="lg">
-              <Option value="lagos">Lagos</Option>
+            <FormLabel>Examination Period</FormLabel>
+            <Select
+              required
+              sx={{ pl: 1 }}
+              variant="outlined"
+              placeholder="Choose one…"
+              size="lg"
+            >
+              <Option value="JAN/FEB">JAN/FEB</Option>
+              <Option value="MAY/JUNE">MAY/JUNE</Option>
+              <Option value="JUNE/JULY">JUNE/JULY</Option>
+              <Option value="NOV/DEC">NOV/DEC</Option>
             </Select>
             <FormHelperText></FormHelperText>
           </FormControl>
         </Grid>
-        <Grid xs={12} sm={6}>
+        <Grid xs={12} sm={4}>
           <FormControl required>
-            <FormLabel>City</FormLabel>
-            <Select variant="outlined" placeholder="Choose one…" size="lg">
-              <Option value="lekki">Lekki</Option>
+            <FormLabel>Examination Year</FormLabel>
+            <Select
+              required
+              sx={{ pl: 1 }}
+              variant="outlined"
+              placeholder="Choose one…"
+              size="lg"
+            >
+              <Option value="2023">2023</Option>
             </Select>
             <FormHelperText></FormHelperText>
           </FormControl>
         </Grid>
-
-        <Grid xs={12} sm={6}>
-          <FormControl required disabled>
-            <FormLabel>Email</FormLabel>
+        <Grid xs={12} sm={4}>
+          <FormControl required>
+            <FormLabel>Examination Number</FormLabel>
             <Input
               sx={{ pl: 1 }}
               required
-              placeholder="Enter your email address"
+              placeholder="Enter examination number"
               size="lg"
               variant="outlined"
-              type="email"
+              type="text"
             />
             <FormHelperText></FormHelperText>
           </FormControl>
         </Grid>
-        <Grid xs={12} sm={6}>
-          <FormControl required disabled>
-            <FormLabel>Phone number</FormLabel>
+        <Grid xs={12} sm={8}>
+          <FormControl required>
+            <FormLabel>Examination School</FormLabel>
             <Input
               sx={{ pl: 1 }}
               required
-              placeholder="Enter your maiden name"
+              placeholder="Enter examination school"
               size="lg"
               variant="outlined"
-              type="tel"
+              type="text"
             />
             <FormHelperText></FormHelperText>
           </FormControl>
+        </Grid>
+        <Grid xs={12}>
+          <TableColumnWidth />
+        </Grid>
+        <Grid xs={7}>
+          <Select
+            required
+            sx={{ pl: 1 }}
+            variant="outlined"
+            size="lg"
+            defaultValue="Mathematics"
+          >
+            <Option value="Mathematics">General Mathematics</Option>
+            <Option value="NECO">English Language</Option>
+          </Select>
+        </Grid>
+        <Grid xs={3}>
+          <Select required sx={{ pl: 1 }} variant="outlined" size="lg">
+            <Option value="A1">A1</Option>
+          </Select>
+        </Grid>
+        <Grid xs={2} alignSelf="center">
+          <Button
+            variant="soft"
+            color="success"
+            fullWidth
+            href="application"
+            sx={{ py: "10px" }}
+            startDecorator={<Add />}
+            type="submit"
+          ></Button>
         </Grid>
       </Grid>
-      <Button
-        href="application"
-        sx={{ width: 190, py: "10px" }}
-        endDecorator={<KeyboardArrowRight />}
-        type="submit"
-      >
-        Save and Continue
-      </Button>
+      <Stack direction="row" justifyContent="space-between">
+        <Button
+          href="application"
+          sx={{ width: 100, py: "10px" }}
+          type="submit"
+        >
+          Save
+        </Button>
+        <Button
+          disabled
+          href="application"
+          sx={{ width: 110, py: "10px" }}
+          endDecorator={<KeyboardArrowRight />}
+          type="submit"
+        >
+          Continue
+        </Button>
+      </Stack>
     </form>
+  );
+}
+
+function AddUtmeForm() {
+  return (
+    <form>
+      <Grid container spacing={2} sx={{ flexGrow: 1, py: 2 }}>
+        <Grid xs={12} sm={4}>
+          <FormControl required>
+            <FormLabel>Examination</FormLabel>
+            <Select
+              required
+              sx={{ pl: 1 }}
+              variant="outlined"
+              placeholder="Choose one…"
+              size="lg"
+            >
+              <Option value="WAEC">WAEC</Option>
+              <Option value="NECO">NECO</Option>
+              <Option value="NABTEB">NABTEB</Option>
+            </Select>
+            <FormHelperText></FormHelperText>
+          </FormControl>
+        </Grid>
+        <Grid xs={12} sm={4}>
+          <FormControl required>
+            <FormLabel>Examination Period</FormLabel>
+            <Select
+              required
+              sx={{ pl: 1 }}
+              variant="outlined"
+              placeholder="Choose one…"
+              size="lg"
+            >
+              <Option value="JAN/FEB">JAN/FEB</Option>
+              <Option value="MAY/JUNE">MAY/JUNE</Option>
+              <Option value="JUNE/JULY">JUNE/JULY</Option>
+              <Option value="NOV/DEC">NOV/DEC</Option>
+            </Select>
+            <FormHelperText></FormHelperText>
+          </FormControl>
+        </Grid>
+        <Grid xs={12} sm={4}>
+          <FormControl required>
+            <FormLabel>Examination Year</FormLabel>
+            <Select
+              required
+              sx={{ pl: 1 }}
+              variant="outlined"
+              placeholder="Choose one…"
+              size="lg"
+            >
+              <Option value="2023">2023</Option>
+            </Select>
+            <FormHelperText></FormHelperText>
+          </FormControl>
+        </Grid>
+        <Grid xs={12} sm={4}>
+          <FormControl required>
+            <FormLabel>Examination Number</FormLabel>
+            <Input
+              sx={{ pl: 1 }}
+              required
+              placeholder="Enter examination number"
+              size="lg"
+              variant="outlined"
+              type="text"
+            />
+            <FormHelperText></FormHelperText>
+          </FormControl>
+        </Grid>
+        <Grid xs={12} sm={8}>
+          <FormControl required>
+            <FormLabel>Examination School</FormLabel>
+            <Input
+              sx={{ pl: 1 }}
+              required
+              placeholder="Enter examination school"
+              size="lg"
+              variant="outlined"
+              type="text"
+            />
+            <FormHelperText></FormHelperText>
+          </FormControl>
+        </Grid>
+        {/* <Grid xs={12}>
+          <TableColumnWidth />
+        </Grid> */}
+        <Grid xs={7}>
+          <Select
+            required
+            sx={{ pl: 1 }}
+            variant="outlined"
+            size="lg"
+            defaultValue="Mathematics"
+          >
+            <Option value="Mathematics">General Mathematics</Option>
+            <Option value="NECO">English Language</Option>
+          </Select>
+        </Grid>
+        <Grid xs={3}>
+          <Select required sx={{ pl: 1 }} variant="outlined" size="lg">
+            <Option value="A1">A1</Option>
+          </Select>
+        </Grid>
+        <Grid xs={2} alignSelf="center">
+          <Button
+            variant="soft"
+            color="success"
+            fullWidth
+            href="application"
+            sx={{ py: "10px" }}
+            startDecorator={<Add />}
+            type="submit"
+          ></Button>
+        </Grid>
+      </Grid>
+      <Stack direction="row" justifyContent="space-between">
+        <Button
+          href="application"
+          sx={{ width: 100, py: "10px" }}
+          type="submit"
+        >
+          Save
+        </Button>
+        <Button
+          disabled
+          href="application"
+          sx={{ width: 110, py: "10px" }}
+          endDecorator={<KeyboardArrowRight />}
+          type="submit"
+        >
+          Continue
+        </Button>
+      </Stack>
+    </form>
+  );
+}
+
+function TableColumnWidth() {
+  return (
+    <Table aria-label="striped table" stripe="odd">
+      <thead>
+        <tr>
+          <th style={{ width: "80%" }}>Subjects</th>
+          <th style={{ textAlign: "center" }}>Grades</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>General Mathematics</td>
+          <td style={{ textAlign: "center" }}>A1</td>
+        </tr>
+      </tbody>
+    </Table>
   );
 }

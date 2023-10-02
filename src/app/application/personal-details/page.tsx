@@ -11,12 +11,7 @@ import {
   FormLabel,
   Grid,
   Input,
-  List,
-  ListItem,
-  ListItemDecorator,
   Option,
-  Radio,
-  RadioGroup,
   Select,
   Typography,
 } from "@mui/joy";
@@ -27,14 +22,8 @@ import {
 import { KeyboardArrowRight } from "@mui/icons-material";
 
 export default function PersonalDetails() {
-  const [selectedValue, setSelectedValue] = React.useState("1");
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedValue(event.target.value);
-  };
-
   return (
-    <Box sx={{ p: 2, maxWidth: 600 }}>
+    <Box sx={{ p: 2, maxWidth: 700 }}>
       <Typography sx={{ pb: 2 }} level="h4">
         Personal Details
       </Typography>
@@ -50,29 +39,11 @@ function PersonalDetailsForm() {
   return (
     <form>
       <Grid container spacing={2} sx={{ flexGrow: 1, py: 2 }}>
-        <Grid xs={12} sm={8}>
-          <FormControl required>
-            <FormLabel>Application Number</FormLabel>
-            <Input
-              value="RCT-54789801"
-              sx={{ pl: 1 }}
-              required
-              size="lg"
-              variant="outlined"
-              type="text"
-              slotProps={{
-                input: {
-                  minLength: 3,
-                },
-              }}
-            />
-            <FormHelperText></FormHelperText>
-          </FormControl>
-        </Grid>
         <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>Title</FormLabel>
             <Select
+              required
               sx={{ pl: 1 }}
               variant="outlined"
               placeholder="Choose one…"
@@ -125,7 +96,7 @@ function PersonalDetailsForm() {
         </Grid>
         <Grid xs={12} sm={4}>
           <FormControl required>
-            <FormLabel>Last Name</FormLabel>
+            <FormLabel>Middle Name</FormLabel>
             <Input
               sx={{ pl: 1 }}
               required
@@ -141,6 +112,7 @@ function PersonalDetailsForm() {
           <FormControl required>
             <FormLabel>Marital Status</FormLabel>
             <Select
+              required
               sx={{ pl: 1 }}
               variant="outlined"
               placeholder="Choose one…"
@@ -154,7 +126,7 @@ function PersonalDetailsForm() {
             <FormHelperText></FormHelperText>
           </FormControl>
         </Grid>
-        <Grid xs={12} sm={8}>
+        <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>Maiden Name</FormLabel>
             <Input
@@ -172,6 +144,7 @@ function PersonalDetailsForm() {
           <FormControl required>
             <FormLabel>Gender</FormLabel>
             <Select
+              required
               sx={{ pl: 1 }}
               variant="outlined"
               placeholder="Choose one…"
@@ -187,6 +160,7 @@ function PersonalDetailsForm() {
           <FormControl required>
             <FormLabel>Religion</FormLabel>
             <Select
+              required
               sx={{ pl: 1 }}
               variant="outlined"
               placeholder="Choose one…"
@@ -215,6 +189,7 @@ function PersonalDetailsForm() {
           <FormControl required>
             <FormLabel>Nationality</FormLabel>
             <Select
+              required
               sx={{ pl: 1 }}
               variant="outlined"
               placeholder="Choose one…"
@@ -229,6 +204,7 @@ function PersonalDetailsForm() {
           <FormControl required>
             <FormLabel>State Of Origin</FormLabel>
             <Select
+              required
               sx={{ pl: 1 }}
               variant="outlined"
               placeholder="Choose one…"
@@ -243,6 +219,7 @@ function PersonalDetailsForm() {
           <FormControl required>
             <FormLabel>Local Government</FormLabel>
             <Select
+              required
               sx={{ pl: 1 }}
               variant="outlined"
               placeholder="Choose one…"
@@ -257,6 +234,7 @@ function PersonalDetailsForm() {
           <FormControl required>
             <FormLabel>Disability</FormLabel>
             <Select
+              required
               sx={{ pl: 1 }}
               variant="outlined"
               placeholder="Choose one…"
@@ -275,6 +253,7 @@ function PersonalDetailsForm() {
               sx={{ pl: 1 }}
               required
               size="lg"
+              placeholder="Your disability if any ..."
               variant="outlined"
               type="text"
             />
@@ -289,58 +268,6 @@ function PersonalDetailsForm() {
         type="submit"
       >
         Save and Continue
-      </Button>
-    </form>
-  );
-}
-
-function ContinueRegistrationForm() {
-  return (
-    <form>
-      <Typography>Continue application process</Typography>
-
-      <Grid container spacing={2} sx={{ flexGrow: 1, py: 2 }}>
-        <Grid xs={12} sm={4}>
-          <FormControl required>
-            <FormLabel>Email Address</FormLabel>
-            <Input
-              sx={{ pl: 1 }}
-              required
-              placeholder="Enter your email address"
-              size="lg"
-              variant="outlined"
-              type="email"
-              slotProps={{
-                input: {
-                  minLength: 3,
-                },
-              }}
-            />
-            <FormHelperText></FormHelperText>
-          </FormControl>
-        </Grid>
-        <Grid xs={12} sm={4}>
-          <FormControl required>
-            <FormLabel>Mobile Phone Number</FormLabel>
-            <Input
-              sx={{ pl: 1 }}
-              required
-              placeholder="Enter your phone number"
-              size="lg"
-              variant="outlined"
-              type="tel"
-            />
-            <FormHelperText></FormHelperText>
-          </FormControl>
-        </Grid>
-      </Grid>
-      <Button
-        href="application"
-        sx={{ width: 190 }}
-        endDecorator={<KeyboardArrowRight />}
-        type="submit"
-      >
-        Verify and Resume
       </Button>
     </form>
   );
