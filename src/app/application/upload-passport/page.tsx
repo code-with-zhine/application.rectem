@@ -37,7 +37,7 @@ export default function ContactInformationPage() {
       <Typography sx={{ pb: 2 }} level="h4">
         Upload Passport
       </Typography>
-      <Alert
+      {/* <Alert
         sx={{ alignItems: "flex-start" }}
         startDecorator={<WarningIcon />}
         variant="soft"
@@ -46,12 +46,15 @@ export default function ContactInformationPage() {
         <div>
           <div>Warning</div>
           <Typography level="body-sm" color="warning">
-            Passport photograph should be in plain background and must not be
-            above (512kb) of size
+            The passport photograph must feature a plain background and should
+            not exceed a file size of 512KB.
           </Typography>
         </div>
-      </Alert>
-
+      </Alert> */}
+      <Typography level="body-sm">
+        The passport photograph must feature a plain background and should not
+        exceed a file size of 512KB.
+      </Typography>
       <br />
       <PassportUpload />
       <Box sx={{ pt: 4 }}>

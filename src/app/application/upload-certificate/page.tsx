@@ -17,7 +17,7 @@ export default function ContactInformationPage() {
       <Typography sx={{ pb: 2 }} level="h4">
         Upload Certificate(s)
       </Typography>
-      <Alert
+      {/* <Alert
         sx={{ alignItems: "flex-start" }}
         startDecorator={<WarningIcon />}
         variant="soft"
@@ -26,12 +26,15 @@ export default function ContactInformationPage() {
         <div>
           <div>Warning</div>
           <Typography level="body-sm" color="warning">
-            Upload O'LEVEL at not more than 2 sitting and UTME result in PDF,
-            JPG, JPEG, PNG format only.
+            Submit your O'LEVEL results in a maximum of two sittings and your
+            UTME results in either PDF, JPG, JPEG, or PNG format.
           </Typography>
         </div>
-      </Alert>
-
+      </Alert> */}
+      <Typography level="body-sm">
+        Upload your O'LEVEL results in a maximum of two sittings and your UTME
+        results in either PDF, JPG, JPEG, or PNG format.
+      </Typography>
       <br />
       <AdvancedDropzoneDemo />
     </Box>
