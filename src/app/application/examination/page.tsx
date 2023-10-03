@@ -49,6 +49,14 @@ export default function ContactInformationPage() {
       <AddOlevelForm />
       <Divider />
       <AddUtmeForm />
+      <Button
+        href="application"
+        sx={{ width: 190, py: "10px" }}
+        endDecorator={<KeyboardArrowRight />}
+        type="submit"
+      >
+        Save and Continue
+      </Button>
     </Box>
   );
 }
@@ -275,24 +283,6 @@ function AddUtmeForm() {
           </Button>
         </Grid>
       </Grid>
-      <Stack direction="row" justifyContent="space-between">
-        <Button
-          href="application"
-          sx={{ width: 100, py: "10px" }}
-          type="submit"
-        >
-          Save
-        </Button>
-        <Button
-          disabled
-          href="application"
-          sx={{ width: 110, py: "10px" }}
-          endDecorator={<KeyboardArrowRight />}
-          type="submit"
-        >
-          Continue
-        </Button>
-      </Stack>
     </form>
   );
 }
