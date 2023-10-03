@@ -58,7 +58,9 @@ export default function ContactInformationPage() {
 function AddOlevelForm() {
   return (
     <form style={{ paddingBottom: 20 }}>
-      <Typography sx={{ pt: 2 }}>O'LEVEL</Typography>
+      <Typography fontWeight={500} sx={{ pt: 2 }}>
+        O'LEVEL
+      </Typography>
       <Grid container spacing={2} sx={{ flexGrow: 1, py: 2 }}>
         <Grid xs={12} sm={4}>
           <FormControl required>
@@ -175,7 +177,9 @@ function AddOlevelForm() {
 function AddUtmeForm() {
   return (
     <form>
-      <Typography sx={{ pt: 2 }}>UTME(JAMB)</Typography>
+      <Typography fontWeight={500} sx={{ pt: 2 }}>
+        UTME(JAMB)
+      </Typography>
       <Grid container spacing={2} sx={{ flexGrow: 1, py: 2 }}>
         <Grid xs={12} sm={4}>
           <FormControl required>
