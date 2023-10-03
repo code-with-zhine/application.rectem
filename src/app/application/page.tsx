@@ -200,7 +200,6 @@ function NewRegistrationForm() {
             <Input
               sx={{ pl: 1 }}
               required
-              placeholder="Enter first name"
               size="lg"
               variant="outlined"
               type="text"
@@ -219,7 +218,6 @@ function NewRegistrationForm() {
             <Input
               sx={{ pl: 1 }}
               required
-              placeholder="Enter middle name"
               size="lg"
               variant="outlined"
               type="text"
@@ -238,7 +236,6 @@ function NewRegistrationForm() {
             <Input
               sx={{ pl: 1 }}
               required
-              placeholder="Enter last name"
               size="lg"
               variant="outlined"
               type="text"
@@ -257,7 +254,6 @@ function NewRegistrationForm() {
             <Input
               sx={{ pl: 1 }}
               required
-              placeholder="Enter your email address"
               size="lg"
               variant="outlined"
               type="email"
@@ -276,7 +272,6 @@ function NewRegistrationForm() {
             <Input
               sx={{ pl: 1 }}
               required
-              placeholder="Enter your phone number"
               size="lg"
               variant="outlined"
               type="tel"
@@ -309,7 +304,6 @@ function ContinueRegistrationForm() {
             <Input
               sx={{ pl: 1 }}
               required
-              placeholder="Enter your email address"
               size="lg"
               variant="outlined"
               type="email"
@@ -328,7 +322,6 @@ function ContinueRegistrationForm() {
             <Input
               sx={{ pl: 1 }}
               required
-              placeholder="Enter your phone number"
               size="lg"
               variant="outlined"
               type="tel"
