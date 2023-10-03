@@ -244,7 +244,7 @@ import FormHelperText from "@mui/joy/FormHelperText";
 
 function CustomCheckbox() {
   return (
-    <FormControl size="sm" sx={{ width: 400, py: 2 }}>
+    <FormControl size="sm" sx={{ maxWidth: 400, py: 2 }}>
       <Checkbox
         label={
           <>
