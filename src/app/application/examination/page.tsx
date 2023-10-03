@@ -233,9 +233,9 @@ function AddUtmeForm() {
             <FormHelperText></FormHelperText>
           </FormControl>
         </Grid>
-        {/* <Grid xs={12}>
+        <Grid xs={12}>
           <TableColumnWidth />
-        </Grid> */}
+        </Grid>
         <Grid xs={7}>
           <Select
             required
