@@ -131,7 +131,7 @@ export default function Home() {
             </FormControl>
 
             <CustomizedRadio />
-
+            <CustomCheckbox />
             <Button
               size="md"
               sx={{ width: 130, py: "10px" }}
@@ -236,5 +236,28 @@ function CustomizedRadio() {
         </Sheet>
       ))}
     </RadioGroup>
+  );
+}
+
+import Checkbox from "@mui/joy/Checkbox";
+import FormHelperText from "@mui/joy/FormHelperText";
+
+function CustomCheckbox() {
+  return (
+    <FormControl size="sm" sx={{ width: 400, py: 2 }}>
+      <Checkbox
+        label={
+          <>
+            I have read and agree to the{" "}
+            <Typography fontWeight="md">terms and conditions</Typography>.
+          </>
+        }
+      />
+      <FormHelperText>
+        <Typography level="body-sm">
+          Read our <Link href="#">terms and conditions</Link>.
+        </Typography>
+      </FormHelperText>
+    </FormControl>
   );
 }

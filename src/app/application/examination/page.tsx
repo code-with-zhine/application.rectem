@@ -22,12 +22,14 @@ import {
   Textarea,
   Typography,
   Table,
+  Divider,
 } from "@mui/joy";
+import Checkbox, { checkboxClasses } from "@mui/joy/Checkbox";
 
 // Custom components
 
 // Icons
-import { Add, KeyboardArrowRight } from "@mui/icons-material";
+import { Add, DocumentScanner, KeyboardArrowRight } from "@mui/icons-material";
 
 export default function ContactInformationPage() {
   const [selectedValue, setSelectedValue] = React.useState("1");
@@ -44,39 +46,9 @@ export default function ContactInformationPage() {
         Examination(s)
       </Typography>
       <Typography>Fill all details carefully!</Typography>
-      <Grid container spacing={2} sx={{ maxWidth: 300, flexGrow: 1, py: 2 }}>
-        <Grid xs={6}>
-          <Button
-            variant="soft"
-            color="success"
-            fullWidth
-            href="application"
-            sx={{ py: "10px" }}
-            startDecorator={<Add />}
-            type="submit"
-            onClick={() => setIsExaminationFormVisible("OLEVEL")}
-          >
-            O'LEVEL
-          </Button>
-        </Grid>
-        <Grid xs={6}>
-          <Button
-            variant="soft"
-            color="success"
-            fullWidth
-            href="application"
-            sx={{ py: "10px" }}
-            startDecorator={<Add />}
-            type="submit"
-            onClick={() => setIsExaminationFormVisible("UTME")}
-          >
-            UTME
-          </Button>
-        </Grid>
-      </Grid>
-      {isExaminationFormVisible == "OLEVEL" && <AddOlevelForm />}
-      {isExaminationFormVisible == "UTME" && <AddUtmeForm />}
-      {/* <AddOlevelForm /> */}
+      <AddOlevelForm />
+      <Divider />
+      <AddUtmeForm />
     </Box>
   );
 }
@@ -85,18 +57,13 @@ export default function ContactInformationPage() {
 
 function AddOlevelForm() {
   return (
-    <form>
+    <form style={{ paddingBottom: 20 }}>
+      <Typography sx={{ pt: 2 }}>O'LEVEL</Typography>
       <Grid container spacing={2} sx={{ flexGrow: 1, py: 2 }}>
         <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>Examination</FormLabel>
-            <Select
-              required
-              sx={{ pl: 1 }}
-              variant="outlined"
-              placeholder="Choose one…"
-              size="lg"
-            >
+            <Select required sx={{ pl: 1 }} variant="outlined" size="lg">
               <Option value="WAEC">WAEC</Option>
               <Option value="NECO">NECO</Option>
               <Option value="NABTEB">NABTEB</Option>
@@ -107,13 +74,7 @@ function AddOlevelForm() {
         <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>Examination Period</FormLabel>
-            <Select
-              required
-              sx={{ pl: 1 }}
-              variant="outlined"
-              placeholder="Choose one…"
-              size="lg"
-            >
+            <Select required sx={{ pl: 1 }} variant="outlined" size="lg">
               <Option value="JAN/FEB">JAN/FEB</Option>
               <Option value="MAY/JUNE">MAY/JUNE</Option>
               <Option value="JUNE/JULY">JUNE/JULY</Option>
@@ -125,13 +86,7 @@ function AddOlevelForm() {
         <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>Examination Year</FormLabel>
-            <Select
-              required
-              sx={{ pl: 1 }}
-              variant="outlined"
-              placeholder="Choose one…"
-              size="lg"
-            >
+            <Select required sx={{ pl: 1 }} variant="outlined" size="lg">
               <Option value="2023">2023</Option>
             </Select>
             <FormHelperText></FormHelperText>
@@ -143,7 +98,6 @@ function AddOlevelForm() {
             <Input
               sx={{ pl: 1 }}
               required
-              placeholder="Enter examination number"
               size="lg"
               variant="outlined"
               type="text"
@@ -157,7 +111,6 @@ function AddOlevelForm() {
             <Input
               sx={{ pl: 1 }}
               required
-              placeholder="Enter examination school"
               size="lg"
               variant="outlined"
               type="text"
@@ -197,7 +150,7 @@ function AddOlevelForm() {
           ></Button>
         </Grid>
       </Grid>
-      <Stack direction="row" justifyContent="space-between">
+      {/* <Stack direction="row" justifyContent="space-between">
         <Button
           href="application"
           sx={{ width: 100, py: "10px" }}
@@ -214,7 +167,7 @@ function AddOlevelForm() {
         >
           Continue
         </Button>
-      </Stack>
+      </Stack> */}
     </form>
   );
 }
@@ -222,34 +175,21 @@ function AddOlevelForm() {
 function AddUtmeForm() {
   return (
     <form>
+      <Typography sx={{ pt: 2 }}>UTME(JAMB)</Typography>
       <Grid container spacing={2} sx={{ flexGrow: 1, py: 2 }}>
         <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>Examination</FormLabel>
-            <Select
-              required
-              sx={{ pl: 1 }}
-              variant="outlined"
-              placeholder="Choose one…"
-              size="lg"
-            >
-              <Option value="WAEC">WAEC</Option>
-              <Option value="NECO">NECO</Option>
-              <Option value="NABTEB">NABTEB</Option>
+            <Select required sx={{ pl: 1 }} variant="outlined" size="lg">
+              <Option value="WAEC">UTME</Option>
             </Select>
             <FormHelperText></FormHelperText>
           </FormControl>
         </Grid>
-        <Grid xs={12} sm={4}>
+        {/* <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>Examination Period</FormLabel>
-            <Select
-              required
-              sx={{ pl: 1 }}
-              variant="outlined"
-              placeholder="Choose one…"
-              size="lg"
-            >
+            <Select required sx={{ pl: 1 }} variant="outlined" size="lg">
               <Option value="JAN/FEB">JAN/FEB</Option>
               <Option value="MAY/JUNE">MAY/JUNE</Option>
               <Option value="JUNE/JULY">JUNE/JULY</Option>
@@ -257,17 +197,11 @@ function AddUtmeForm() {
             </Select>
             <FormHelperText></FormHelperText>
           </FormControl>
-        </Grid>
-        <Grid xs={12} sm={4}>
+        </Grid> */}
+        <Grid xs={12} sm={8}>
           <FormControl required>
             <FormLabel>Examination Year</FormLabel>
-            <Select
-              required
-              sx={{ pl: 1 }}
-              variant="outlined"
-              placeholder="Choose one…"
-              size="lg"
-            >
+            <Select required sx={{ pl: 1 }} variant="outlined" size="lg">
               <Option value="2023">2023</Option>
             </Select>
             <FormHelperText></FormHelperText>
@@ -279,7 +213,6 @@ function AddUtmeForm() {
             <Input
               sx={{ pl: 1 }}
               required
-              placeholder="Enter examination number"
               size="lg"
               variant="outlined"
               type="text"
@@ -293,7 +226,6 @@ function AddUtmeForm() {
             <Input
               sx={{ pl: 1 }}
               required
-              placeholder="Enter examination school"
               size="lg"
               variant="outlined"
               type="text"
@@ -317,9 +249,13 @@ function AddUtmeForm() {
           </Select>
         </Grid>
         <Grid xs={3}>
-          <Select required sx={{ pl: 1 }} variant="outlined" size="lg">
-            <Option value="A1">A1</Option>
-          </Select>
+          <Input
+            sx={{ pl: 1 }}
+            required
+            size="lg"
+            variant="outlined"
+            type="number"
+          />
         </Grid>
         <Grid xs={2} alignSelf="center">
           <Button
