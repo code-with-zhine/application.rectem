@@ -43,33 +43,21 @@ function ContactInformationForm() {
         <Grid xs={12} sm={6}>
           <FormControl required>
             <FormLabel>Address</FormLabel>
-            <Textarea required placeholder="Enter your address" minRows={3} />
+            <Textarea required minRows={3} />
             <FormHelperText></FormHelperText>
           </FormControl>
         </Grid>
         <Grid xs={12} sm={6}>
           <FormControl>
             <FormLabel>Postal Address</FormLabel>
-            <Input
-              sx={{ pl: 1 }}
-              placeholder="Enter your postal address"
-              size="lg"
-              variant="outlined"
-              type="tel"
-            />
+            <Input sx={{ pl: 1 }} size="lg" variant="outlined" type="tel" />
             <FormHelperText></FormHelperText>
           </FormControl>
         </Grid>
         <Grid xs={12} sm={6}>
           <FormControl required>
             <FormLabel>State</FormLabel>
-            <Select
-              required
-              sx={{ pl: 1 }}
-              variant="outlined"
-              placeholder="Choose one…"
-              size="lg"
-            >
+            <Select required sx={{ pl: 1 }} variant="outlined" size="lg">
               <Option value="lagos">Lagos</Option>
             </Select>
             <FormHelperText></FormHelperText>
@@ -78,13 +66,7 @@ function ContactInformationForm() {
         <Grid xs={12} sm={6}>
           <FormControl required>
             <FormLabel>City</FormLabel>
-            <Select
-              required
-              sx={{ pl: 1 }}
-              variant="outlined"
-              placeholder="Choose one…"
-              size="lg"
-            >
+            <Select required sx={{ pl: 1 }} variant="outlined" size="lg">
               <Option value="lekki">Lekki</Option>
             </Select>
             <FormHelperText></FormHelperText>
