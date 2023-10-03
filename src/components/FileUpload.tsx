@@ -72,8 +72,8 @@ export default function AdvancedDropzoneDemo() {
         actionButtons={{
           position: "after",
           abortButton: {},
-          cleanButton: {},
-          deleteButton: {},
+          // cleanButton: {},
+          // deleteButton: {},
           uploadButton: {},
         }}
       >
