@@ -103,7 +103,7 @@ function Root(props: BoxProps) {
   );
 }
 
-function Header(props: BoxProps) {
+export function Header(props: BoxProps) {
   return (
     <Box
       component="header"

@@ -1,6 +1,7 @@
 "use client";
 // Next / React
 import Image from "next/image";
+import Link from "next/link";
 
 // UI library
 import FormLabel, { formLabelClasses } from "@mui/joy/FormLabel";
@@ -8,8 +9,10 @@ import { radioClasses } from "@mui/joy/Radio";
 import {
   Avatar,
   Box,
+  Checkbox,
   Button,
   FormControl,
+  FormHelperText,
   GlobalStyles,
   Radio,
   RadioGroup,
@@ -17,12 +20,12 @@ import {
   Sheet,
 } from "@mui/joy";
 
+// icons
 import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircleRounded";
 import { KeyboardArrowRight } from "@mui/icons-material";
 
 // Custom components
 import ColorSchemeToggle from "@/components/ThemeRegistry/ColorSchemeToggle";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -132,11 +135,7 @@ export default function Home() {
 
             <CustomizedRadio />
             <CustomCheckbox />
-            <Button
-              size="md"
-              sx={{ width: 130, py: "10px" }}
-              endDecorator={<KeyboardArrowRight />}
-            >
+            <Button size="md" sx={{ width: 130, py: "10px" }}>
               Continue
             </Button>
           </Box>
@@ -238,9 +237,6 @@ function CustomizedRadio() {
     </RadioGroup>
   );
 }
-
-import Checkbox from "@mui/joy/Checkbox";
-import FormHelperText from "@mui/joy/FormHelperText";
 
 function CustomCheckbox() {
   return (

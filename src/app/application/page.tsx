@@ -46,11 +46,7 @@ export default function ApplicationPage() {
 function GetStarted({ selectedValue }: { selectedValue: String }) {
   if (selectedValue === "1") {
     return (
-      <Button
-        size="md"
-        sx={{ width: 200, py: "10px" }}
-        endDecorator={<KeyboardArrowRight />}
-      >
+      <Button size="md" sx={{ width: 200, py: "10px" }}>
         Go To Student Portal
       </Button>
     );
@@ -196,6 +192,24 @@ function NewRegistrationForm() {
       <Grid container spacing={2} sx={{ flexGrow: 1, py: 2 }}>
         <Grid xs={12} sm={4}>
           <FormControl required component="form">
+            <FormLabel>Surname</FormLabel>
+            <Input
+              sx={{ pl: 1 }}
+              required
+              size="lg"
+              variant="outlined"
+              type="text"
+              slotProps={{
+                input: {
+                  minLength: 3,
+                },
+              }}
+            />
+            <FormHelperText></FormHelperText>
+          </FormControl>
+        </Grid>
+        <Grid xs={12} sm={4}>
+          <FormControl required component="form">
             <FormLabel>First Name</FormLabel>
             <Input
               sx={{ pl: 1 }}
@@ -214,25 +228,7 @@ function NewRegistrationForm() {
         </Grid>
         <Grid xs={12} sm={4}>
           <FormControl required component="form">
-            <FormLabel>Middle Name</FormLabel>
-            <Input
-              sx={{ pl: 1 }}
-              required
-              size="lg"
-              variant="outlined"
-              type="text"
-              slotProps={{
-                input: {
-                  minLength: 3,
-                },
-              }}
-            />
-            <FormHelperText></FormHelperText>
-          </FormControl>
-        </Grid>
-        <Grid xs={12} sm={4}>
-          <FormControl required component="form">
-            <FormLabel>Last Name</FormLabel>
+            <FormLabel>Other Name</FormLabel>
             <Input
               sx={{ pl: 1 }}
               required
@@ -280,13 +276,8 @@ function NewRegistrationForm() {
           </FormControl>
         </Grid>
       </Grid>
-      <Button
-        href="application"
-        sx={{ width: 100, py: "10px" }}
-        endDecorator={<KeyboardArrowRight />}
-        type="submit"
-      >
-        Start
+      <Button sx={{ width: 100, py: "10px" }} type="submit">
+        Continue
       </Button>
     </form>
   );
@@ -330,12 +321,7 @@ function ContinueRegistrationForm() {
           </FormControl>
         </Grid>
       </Grid>
-      <Button
-        href="application"
-        sx={{ width: 190, py: "10px" }}
-        endDecorator={<KeyboardArrowRight />}
-        type="submit"
-      >
+      <Button sx={{ width: 190, py: "10px" }} type="submit">
         Verify and Resume
       </Button>
     </form>

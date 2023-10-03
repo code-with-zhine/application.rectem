@@ -11,17 +11,11 @@ import {
   FormLabel,
   Grid,
   Input,
-  List,
-  ListItem,
-  ListItemDecorator,
   Modal,
   ModalClose,
   Option,
-  Radio,
-  RadioGroup,
   Select,
   Sheet,
-  Textarea,
   Typography,
 } from "@mui/joy";
 
@@ -31,12 +25,6 @@ import {
 import { KeyboardArrowRight } from "@mui/icons-material";
 
 export default function CourseOfStudyPage() {
-  const [selectedValue, setSelectedValue] = React.useState("1");
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedValue(event.target.value);
-  };
-
   return (
     <Box sx={{ p: 2, maxWidth: 600 }}>
       <Typography sx={{ pb: 2 }} level="h4">
@@ -56,20 +44,41 @@ function CourseOfStudyForm() {
   return (
     <form>
       <Grid container spacing={2} sx={{ flexGrow: 1, py: 2 }}>
-        <Grid xs={12} sm={8}>
+        <Grid xs={12} sm={6}>
           <FormControl required>
-            <FormLabel>School</FormLabel>
-            <Select sx={{ pl: 1 }} variant="outlined" size="lg">
-              <Option value="lagos">Lagos</Option>
+            <FormLabel>Programme</FormLabel>
+            <Select
+              sx={{ pl: 1 }}
+              variant="outlined"
+              size="lg"
+              defaultValue="nd-full-time"
+            >
+              <Option value="nd-full-time">ND Full Time</Option>
+              <Option value="hnd-full-time">HND Full Time</Option>
             </Select>
             <FormHelperText></FormHelperText>
           </FormControl>
         </Grid>
-        <Grid xs={12} sm={8}>
+
+        <Grid xs={12} sm={6}>
+          <FormControl required>
+            <FormLabel>School</FormLabel>
+            <Select
+              sx={{ pl: 1 }}
+              variant="outlined"
+              size="lg"
+              defaultValue="nd-full-time"
+            >
+              <Option value="MANAGEMENT">MANAGEMENT</Option>
+            </Select>
+            <FormHelperText></FormHelperText>
+          </FormControl>
+        </Grid>
+        <Grid xs={12} sm={6}>
           <FormControl required>
             <FormLabel>Course</FormLabel>
             <Select sx={{ pl: 1 }} variant="outlined" size="lg">
-              <Option value="lekki">Lekki</Option>
+              <Option value="computer-science">Computer Science</Option>
             </Select>
             <FormHelperText>
               <a
@@ -86,12 +95,7 @@ function CourseOfStudyForm() {
           </FormControl>
         </Grid>
       </Grid>
-      <Button
-        href="application"
-        sx={{ width: 190, py: "10px" }}
-        endDecorator={<KeyboardArrowRight />}
-        type="submit"
-      >
+      <Button sx={{ width: 190, py: "10px" }} type="submit">
         Save and Continue
       </Button>
 

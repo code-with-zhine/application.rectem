@@ -1,3 +1,5 @@
+"use client";
+
 // Next / React
 import React from "react";
 import { IconButton, useColorScheme } from "@mui/joy";

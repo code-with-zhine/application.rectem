@@ -140,12 +140,7 @@ function NextOfKinForm() {
           </FormControl>
         </Grid>
       </Grid>
-      <Button
-        href="application"
-        sx={{ width: 190, py: "10px" }}
-        endDecorator={<KeyboardArrowRight />}
-        type="submit"
-      >
+      <Button sx={{ width: 190, py: "10px" }} type="submit">
         Save and Continue
       </Button>
     </form>

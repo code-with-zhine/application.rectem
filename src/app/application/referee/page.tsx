@@ -28,7 +28,6 @@ export default function RefereeInformationPage() {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedValue(event.target.checked);
   };
-  console.log(selectedValue);
 
   return (
     <Box sx={{ p: 2, maxWidth: 700 }}>
@@ -115,12 +114,7 @@ function RefereeInformationForm() {
           </FormControl>
         </Grid>
       </Grid>
-      <Button
-        href="application"
-        sx={{ width: 190, py: "10px" }}
-        endDecorator={<KeyboardArrowRight />}
-        type="submit"
-      >
+      <Button sx={{ width: 190, py: "10px" }} type="submit">
         Save and Continue
       </Button>
     </form>
@@ -145,12 +139,7 @@ function OthersRefereeInformationForm() {
           </FormControl>
         </Grid>
       </Grid>
-      <Button
-        href="application"
-        sx={{ width: 190, py: "10px" }}
-        endDecorator={<KeyboardArrowRight />}
-        type="submit"
-      >
+      <Button sx={{ width: 190, py: "10px" }} type="submit">
         Save and Continue
       </Button>
     </form>

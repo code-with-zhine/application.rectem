@@ -42,13 +42,7 @@ function PersonalDetailsForm() {
         <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>Title</FormLabel>
-            <Select
-              required
-              sx={{ pl: 1 }}
-              variant="outlined"
-              placeholder="Choose one…"
-              size="lg"
-            >
+            <Select required sx={{ pl: 1 }} variant="outlined" size="lg">
               <Option value="mr">Mr.</Option>
               <Option value="miss">Miss.</Option>
               <Option value="mrs">Mrs.</Option>
@@ -62,7 +56,6 @@ function PersonalDetailsForm() {
             <Input
               sx={{ pl: 1 }}
               required
-              placeholder="Enter last name"
               size="lg"
               variant="outlined"
               type="text"
@@ -81,7 +74,6 @@ function PersonalDetailsForm() {
             <Input
               sx={{ pl: 1 }}
               required
-              placeholder="Enter your first name"
               size="lg"
               variant="outlined"
               type="email"
@@ -100,7 +92,6 @@ function PersonalDetailsForm() {
             <Input
               sx={{ pl: 1 }}
               required
-              placeholder="Enter your last name"
               size="lg"
               variant="outlined"
               type="tel"
@@ -111,13 +102,7 @@ function PersonalDetailsForm() {
         <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>Marital Status</FormLabel>
-            <Select
-              required
-              sx={{ pl: 1 }}
-              variant="outlined"
-              placeholder="Choose one…"
-              size="lg"
-            >
+            <Select required sx={{ pl: 1 }} variant="outlined" size="lg">
               <Option value="single">Single</Option>
               <Option value="engaged">Engaged</Option>
               <Option value="married">Married</Option>
@@ -132,7 +117,6 @@ function PersonalDetailsForm() {
             <Input
               sx={{ pl: 1 }}
               required
-              placeholder="Enter your maiden name"
               size="lg"
               variant="outlined"
               type="tel"
@@ -143,13 +127,7 @@ function PersonalDetailsForm() {
         <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>Gender</FormLabel>
-            <Select
-              required
-              sx={{ pl: 1 }}
-              variant="outlined"
-              placeholder="Choose one…"
-              size="lg"
-            >
+            <Select required sx={{ pl: 1 }} variant="outlined" size="lg">
               <Option value="M">Male</Option>
               <Option value="F">Female</Option>
             </Select>
@@ -159,13 +137,7 @@ function PersonalDetailsForm() {
         <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>Religion</FormLabel>
-            <Select
-              required
-              sx={{ pl: 1 }}
-              variant="outlined"
-              placeholder="Choose one…"
-              size="lg"
-            >
+            <Select required sx={{ pl: 1 }} variant="outlined" size="lg">
               <Option value="christian">Christianity</Option>
               <Option value="islam">Islam</Option>
             </Select>
@@ -188,13 +160,7 @@ function PersonalDetailsForm() {
         <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>Nationality</FormLabel>
-            <Select
-              required
-              sx={{ pl: 1 }}
-              variant="outlined"
-              placeholder="Choose one…"
-              size="lg"
-            >
+            <Select required sx={{ pl: 1 }} variant="outlined" size="lg">
               <Option value="nigeria">Nigeria</Option>
             </Select>
             <FormHelperText></FormHelperText>
@@ -203,13 +169,7 @@ function PersonalDetailsForm() {
         <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>State Of Origin</FormLabel>
-            <Select
-              required
-              sx={{ pl: 1 }}
-              variant="outlined"
-              placeholder="Choose one…"
-              size="lg"
-            >
+            <Select required sx={{ pl: 1 }} variant="outlined" size="lg">
               <Option value="lagos">Lagos</Option>
             </Select>
             <FormHelperText></FormHelperText>
@@ -218,13 +178,7 @@ function PersonalDetailsForm() {
         <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>Local Government</FormLabel>
-            <Select
-              required
-              sx={{ pl: 1 }}
-              variant="outlined"
-              placeholder="Choose one…"
-              size="lg"
-            >
+            <Select required sx={{ pl: 1 }} variant="outlined" size="lg">
               <Option value="eti-osa">Eti-Osa</Option>
             </Select>
             <FormHelperText></FormHelperText>
@@ -233,13 +187,7 @@ function PersonalDetailsForm() {
         <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>Disability</FormLabel>
-            <Select
-              required
-              sx={{ pl: 1 }}
-              variant="outlined"
-              placeholder="Choose one…"
-              size="lg"
-            >
+            <Select required sx={{ pl: 1 }} variant="outlined" size="lg">
               <Option value="N">None</Option>
               <Option value="Y">Yes</Option>
             </Select>
@@ -253,7 +201,6 @@ function PersonalDetailsForm() {
               sx={{ pl: 1 }}
               required
               size="lg"
-              placeholder="Your disability if any ..."
               variant="outlined"
               type="text"
             />
@@ -262,9 +209,9 @@ function PersonalDetailsForm() {
         </Grid>
       </Grid>
       <Button
+        variant="outlined"
         href="application"
         sx={{ width: 190, py: "10px" }}
-        endDecorator={<KeyboardArrowRight />}
         type="submit"
       >
         Save and Continue

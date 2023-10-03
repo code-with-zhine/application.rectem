@@ -32,12 +32,10 @@ import Checkbox, { checkboxClasses } from "@mui/joy/Checkbox";
 import { Add, DocumentScanner, KeyboardArrowRight } from "@mui/icons-material";
 
 export default function ContactInformationPage() {
-  const [selectedValue, setSelectedValue] = React.useState("1");
-  const [isExaminationFormVisible, setIsExaminationFormVisible] =
-    React.useState<string>("OLEVEL");
+  const [selectedValue, setSelectedValue] = React.useState<boolean>(true);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedValue(event.target.value);
+    setSelectedValue(event.target.checked);
   };
 
   return (
@@ -46,17 +44,38 @@ export default function ContactInformationPage() {
         Examination(s)
       </Typography>
       <Typography>Fill all details carefully!</Typography>
+      <Checkbox
+        sx={{ pt: 2 }}
+        label="Are you using 2 sitting? (O'LEVEL)"
+        defaultChecked
+        onChange={handleChange}
+      />
       <AddOlevelForm />
-      <Divider />
-      <AddUtmeForm />
-      <Button
+      <Stack direction="row" justifyContent="space-between">
+        {selectedValue ? (
+          <>
+            <Button sx={{ width: 100, py: "10px" }} type="submit">
+              Save
+            </Button>
+            <Button disabled sx={{ width: 110, py: "10px" }} type="submit">
+              Continue
+            </Button>
+          </>
+        ) : (
+          <Button sx={{ width: 190, py: "10px" }} type="submit">
+            Save and Continue
+          </Button>
+        )}
+      </Stack>
+      {/* <AddUtmeForm /> */}
+      {/* <Button
         href="application"
         sx={{ width: 190, py: "10px" }}
         endDecorator={<KeyboardArrowRight />}
         type="submit"
       >
         Save and Continue
-      </Button>
+      </Button> */}
     </Box>
   );
 }
@@ -161,24 +180,6 @@ function AddOlevelForm() {
           </Button>
         </Grid>
       </Grid>
-      {/* <Stack direction="row" justifyContent="space-between">
-        <Button
-          href="application"
-          sx={{ width: 100, py: "10px" }}
-          type="submit"
-        >
-          Save
-        </Button>
-        <Button
-          disabled
-          href="application"
-          sx={{ width: 110, py: "10px" }}
-          endDecorator={<KeyboardArrowRight />}
-          type="submit"
-        >
-          Continue
-        </Button>
-      </Stack> */}
     </form>
   );
 }
@@ -235,7 +236,7 @@ function AddUtmeForm() {
         </Grid>
         <Grid xs={12} sm={8}>
           <FormControl required>
-            <FormLabel>Examination School</FormLabel>
+            <FormLabel>Examination Center</FormLabel>
             <Input
               sx={{ pl: 1 }}
               required
