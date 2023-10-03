@@ -12,14 +12,8 @@ import {
   FormLabel,
   Grid,
   Input,
-  List,
-  ListItem,
-  ListItemDecorator,
   Option,
-  Radio,
-  RadioGroup,
   Select,
-  Textarea,
   Typography,
 } from "@mui/joy";
 
@@ -66,13 +60,7 @@ function RefereeInformationForm() {
         <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>Title</FormLabel>
-            <Select
-              required
-              sx={{ pl: 1 }}
-              variant="outlined"
-              placeholder="Choose one…"
-              size="lg"
-            >
+            <Select required sx={{ pl: 1 }} variant="outlined" size="lg">
               <Option value="mr">Mr.</Option>
               <Option value="miss">Miss.</Option>
               <Option value="mrs">Mrs.</Option>
@@ -89,7 +77,6 @@ function RefereeInformationForm() {
             <Input
               sx={{ pl: 1 }}
               required
-              placeholder="Enter full name"
               size="lg"
               variant="outlined"
               type="text"
@@ -105,39 +92,21 @@ function RefereeInformationForm() {
         <Grid xs={12} sm={4}>
           <FormControl>
             <FormLabel>Phone number</FormLabel>
-            <Input
-              sx={{ pl: 1 }}
-              placeholder="Enter phone number"
-              size="lg"
-              variant="outlined"
-              type="tel"
-            />
+            <Input sx={{ pl: 1 }} size="lg" variant="outlined" type="tel" />
             <FormHelperText></FormHelperText>
           </FormControl>
         </Grid>
         <Grid xs={12} sm={4}>
           <FormControl>
             <FormLabel>Email</FormLabel>
-            <Input
-              sx={{ pl: 1 }}
-              placeholder="Enter email"
-              size="lg"
-              variant="outlined"
-              type="email"
-            />
+            <Input sx={{ pl: 1 }} size="lg" variant="outlined" type="email" />
             <FormHelperText></FormHelperText>
           </FormControl>
         </Grid>
         <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>Referred by</FormLabel>
-            <Select
-              required
-              sx={{ pl: 1 }}
-              variant="outlined"
-              placeholder="Choose one…"
-              size="lg"
-            >
+            <Select required sx={{ pl: 1 }} variant="outlined" size="lg">
               <Option value="mr">Staff</Option>
               <Option value="miss">Student</Option>
               <Option value="mrs">Others</Option>
@@ -165,13 +134,7 @@ function OthersRefereeInformationForm() {
         <Grid xs={12} sm={8}>
           <FormControl required>
             <FormLabel>I learnt about RECTEM on</FormLabel>
-            <Select
-              required
-              sx={{ pl: 1 }}
-              variant="outlined"
-              placeholder="Choose one…"
-              size="lg"
-            >
+            <Select required sx={{ pl: 1 }} variant="outlined" size="lg">
               <Option value="mr">Facebook</Option>
               <Option value="miss">Twitter</Option>
               <Option value="mrs">Instagram</Option>

@@ -43,13 +43,7 @@ function NextOfKinForm() {
         <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>Title</FormLabel>
-            <Select
-              required
-              sx={{ pl: 1 }}
-              variant="outlined"
-              placeholder="Choose one…"
-              size="lg"
-            >
+            <Select required sx={{ pl: 1 }} variant="outlined" size="lg">
               <Option value="mr">Mr.</Option>
               <Option value="miss">Miss.</Option>
               <Option value="mrs">Mrs.</Option>
@@ -67,7 +61,6 @@ function NextOfKinForm() {
             <Input
               sx={{ pl: 1 }}
               required
-              placeholder="Enter full name"
               size="lg"
               variant="outlined"
               type="text"
@@ -83,13 +76,7 @@ function NextOfKinForm() {
         <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>Relationship</FormLabel>
-            <Select
-              required
-              sx={{ pl: 1 }}
-              variant="outlined"
-              placeholder="Choose one…"
-              size="lg"
-            >
+            <Select required sx={{ pl: 1 }} variant="outlined" size="lg">
               <Option value="single">Mother</Option>
               <Option value="engaged">Father</Option>
               <Option value="married">Parent</Option>
@@ -108,7 +95,6 @@ function NextOfKinForm() {
             <Input
               sx={{ pl: 1 }}
               required
-              placeholder="Enter phone number"
               size="lg"
               variant="outlined"
               type="tel"
@@ -119,13 +105,7 @@ function NextOfKinForm() {
         <Grid xs={12} sm={4}>
           <FormControl>
             <FormLabel>Email</FormLabel>
-            <Input
-              sx={{ pl: 1 }}
-              placeholder="Enter email"
-              size="lg"
-              variant="outlined"
-              type="email"
-            />
+            <Input sx={{ pl: 1 }} size="lg" variant="outlined" type="email" />
             <FormHelperText></FormHelperText>
           </FormControl>
         </Grid>
@@ -135,7 +115,6 @@ function NextOfKinForm() {
             <Input
               sx={{ pl: 1 }}
               required
-              placeholder="Enter occupation"
               size="lg"
               variant="outlined"
               type="text"
@@ -146,20 +125,14 @@ function NextOfKinForm() {
         <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>Address</FormLabel>
-            <Textarea required placeholder="Enter address" minRows={3} />
+            <Textarea required minRows={3} />
             <FormHelperText></FormHelperText>
           </FormControl>
         </Grid>
         <Grid xs={12} sm={4}>
           <FormControl required>
             <FormLabel>Nationality</FormLabel>
-            <Select
-              required
-              sx={{ pl: 1 }}
-              variant="outlined"
-              placeholder="Choose one…"
-              size="lg"
-            >
+            <Select required sx={{ pl: 1 }} variant="outlined" size="lg">
               <Option value="nigeria">Nigeria</Option>
               <Option value="others">Others</Option>
             </Select>

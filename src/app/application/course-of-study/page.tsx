@@ -59,7 +59,7 @@ function CourseOfStudyForm() {
         <Grid xs={12} sm={8}>
           <FormControl required>
             <FormLabel>School</FormLabel>
-            <Select variant="outlined" placeholder="Choose one…" size="lg">
+            <Select sx={{ pl: 1 }} variant="outlined" size="lg">
               <Option value="lagos">Lagos</Option>
             </Select>
             <FormHelperText></FormHelperText>
@@ -68,7 +68,7 @@ function CourseOfStudyForm() {
         <Grid xs={12} sm={8}>
           <FormControl required>
             <FormLabel>Course</FormLabel>
-            <Select variant="outlined" placeholder="Choose one…" size="lg">
+            <Select sx={{ pl: 1 }} variant="outlined" size="lg">
               <Option value="lekki">Lekki</Option>
             </Select>
             <FormHelperText>
