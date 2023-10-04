@@ -208,12 +208,7 @@ function PersonalDetailsForm() {
           </FormControl>
         </Grid>
       </Grid>
-      <Button
-        variant="outlined"
-        href="application"
-        sx={{ width: 190, py: "10px" }}
-        type="submit"
-      >
+      <Button sx={{ width: 190, py: "10px" }} type="submit">
         Save and Continue
       </Button>
     </form>
