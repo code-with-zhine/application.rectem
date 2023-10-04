@@ -127,7 +127,7 @@ function OthersRefereeInformationForm() {
       <Grid container spacing={2} sx={{ flexGrow: 1, py: 2 }}>
         <Grid xs={12} sm={8}>
           <FormControl required>
-            <FormLabel>I learnt about RECTEM on</FormLabel>
+            <FormLabel>I got to know about RECTEM from</FormLabel>
             <Select required sx={{ pl: 1 }} variant="outlined" size="lg">
               <Option value="mr">Facebook</Option>
               <Option value="miss">Twitter</Option>
