@@ -1,6 +1,6 @@
 "use client";
 // Next / React
-import React from "react";
+import React, { Suspense, useEffect } from "react";
 
 // UI library
 import { Alert, Box, Typography } from "@mui/joy";
@@ -12,11 +12,17 @@ import AdvancedDropzoneDemo from "@/components/FileUpload";
 import WarningIcon from "@mui/icons-material/Warning";
 
 export default function ContactInformationPage() {
+  const [loading, setLoading] = React.useState(true);
+  const [DropZone, setDropZone] = React.useState<React.JSX.Element>();
+
+  React.useEffect(() => {
+    setDropZone(<AdvancedDropzoneDemo />);
+    setLoading(false);
+  }, []);
+
   return (
     <Box sx={{ p: 2, maxWidth: 600 }}>
-      <Typography sx={{ pb: 2 }} level="h4">
-        Upload Certificate(s)
-      </Typography>
+      <Typography level="h4">Upload Certificate(s)</Typography>
       {/* <Alert
         sx={{ alignItems: "flex-start" }}
         startDecorator={<WarningIcon />}
@@ -31,15 +37,18 @@ export default function ContactInformationPage() {
           </Typography>
         </div>
       </Alert> */}
-      <Typography level="body-sm">
-        Upload your O'LEVEL results in a maximum of two sittings and your UTME
-        results in either PDF, JPG, JPEG, or PNG format.
-      </Typography>
+
       <br />
-      {!(<AdvancedDropzoneDemo />) ? (
-        <div>loading</div>
+      {loading ? (
+        <div>loading...</div>
       ) : (
-        <AdvancedDropzoneDemo />
+        <>
+          <Typography sx={{ pb: 2 }} level="body-sm">
+            Upload your O'LEVEL results in a maximum of two sittings and your
+            UTME results in either PDF, JPG, JPEG, or PNG format.
+          </Typography>
+          {DropZone}
+        </>
       )}
     </Box>
   );
