@@ -26,11 +26,13 @@ import { KeyboardArrowRight } from "@mui/icons-material";
 import WarningIcon from "@mui/icons-material/Warning";
 
 export default function ContactInformationPage() {
-  const [selectedValue, setSelectedValue] = React.useState("1");
+  const [loading, setLoading] = React.useState(true);
+  const [DropZone, setDropZone] = React.useState<React.JSX.Element>();
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedValue(event.target.value);
-  };
+  React.useEffect(() => {
+    setDropZone(<PassportUpload />);
+    setLoading(false);
+  }, []);
 
   return (
     <Box sx={{ p: 2, maxWidth: 600 }}>
@@ -51,17 +53,23 @@ export default function ContactInformationPage() {
           </Typography>
         </div>
       </Alert> */}
-      <Typography level="body-sm">
-        The passport photograph must feature a plain background and should not
-        exceed a file size of 512KB.
-      </Typography>
       <br />
-      <PassportUpload />
-      <Box sx={{ pt: 4 }}>
-        <Button sx={{ width: 200, py: "10px" }} type="submit">
-          Upload and Continue
-        </Button>
-      </Box>
+      {loading ? (
+        <div>loading...</div>
+      ) : (
+        <>
+          <Typography sx={{ pb: 2 }} level="body-sm">
+            The passport photograph must feature a plain background and should
+            not exceed a file size of 512KB.
+          </Typography>
+          {DropZone}
+          <Box sx={{ pt: 4 }}>
+            <Button sx={{ width: 200, py: "10px" }} type="submit">
+              Upload and Continue
+            </Button>
+          </Box>
+        </>
+      )}
     </Box>
   );
 }

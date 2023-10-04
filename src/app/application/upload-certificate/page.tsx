@@ -37,7 +37,6 @@ export default function ContactInformationPage() {
           </Typography>
         </div>
       </Alert> */}
-
       <br />
       {loading ? (
         <div>loading...</div>
