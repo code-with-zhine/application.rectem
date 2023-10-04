@@ -37,7 +37,7 @@ export default function RefereeInformationPage() {
       <Typography>Fill all details carefully!</Typography>
       <Checkbox
         sx={{ py: 2 }}
-        label="Are you referred by someone?"
+        label="Were you recommended by someone?"
         defaultChecked
         onChange={handleChange}
       />
