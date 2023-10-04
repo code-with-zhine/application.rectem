@@ -46,7 +46,7 @@ export default function ContactInformationPage() {
       <Typography>Fill all details carefully!</Typography>
       <Checkbox
         sx={{ pt: 2 }}
-        label="Are you using 2 sitting? (O'LEVEL)"
+        label="Are you utilizing a two-sitting O'Level for your admission?"
         defaultChecked
         onChange={handleChange}
       />
