@@ -36,7 +36,11 @@ export default function ContactInformationPage() {
         results in either PDF, JPG, JPEG, or PNG format.
       </Typography>
       <br />
-      <AdvancedDropzoneDemo />
+      {!(<AdvancedDropzoneDemo />) ? (
+        <div>loading</div>
+      ) : (
+        <AdvancedDropzoneDemo />
+      )}
     </Box>
   );
 }
